@@ -3,7 +3,7 @@ const helper = require('../helpers/helpers')
 
 const pin = {
   getPinByUserId: (req, res) => {
-    const id = req.params.id
+    const id = req.params.userId
     pinModels.getPinByUserId(id)
       .then((result) => {
         if (result.length > 0) {
@@ -35,14 +35,12 @@ const pin = {
       })
   },
   updatePin: (req, res) => {
-    const id = req.params.id
+    const id = req.params.userId
     const {
-      pin,
-      userId
+      pin
     } = req.body
     const data = {
-      pin,
-      userId
+      pin
     }
     pinModels.updatePin(id, data)
       .then((result) => {
@@ -54,7 +52,7 @@ const pin = {
       })
   },
   deletePin: (req, res) => {
-    const id = req.params.id
+    const id = req.params.userId
     pinModels.deletePin(id)
       .then((result) => {
         helper.res(res, result, 200, null)

@@ -1,9 +1,9 @@
 const connection = require('../configs/db')
 
 const pin = {
-  getPinByUserId: (id) => {
+  getPinByUserId: (userId) => {
     return new Promise((resolve, reject) => {
-      connection.query('SELECT * FROM pin WHERE userId = ?', id, (err, result) => {
+      connection.query('SELECT * FROM pin WHERE userId = ?', userId, (err, result) => {
         if (!err) {
           resolve(result)
         } else {
@@ -23,9 +23,9 @@ const pin = {
       })
     })
   },
-  updatePin: (id, data) => {
+  updatePin: (userId, data) => {
     return new Promise((resolve, reject) => {
-      connection.query('UPDATE pin SET ? WHERE userId = ?', [data, id], (err, result) => {
+      connection.query('UPDATE pin SET ? WHERE userId = ?', [data, userId], (err, result) => {
         if (!err) {
           resolve(result)
         } else {
@@ -34,9 +34,9 @@ const pin = {
       })
     })
   },
-  deletePin: (id) => {
+  deletePin: (userId) => {
     return new Promise((resolve, reject) => {
-      connection.query('DELETE FROM pin WHERE userId = ?', id, (err, result) => {
+      connection.query('DELETE FROM pin WHERE userId = ?', userId, (err, result) => {
         if (!err) {
           resolve(result)
         } else {
@@ -44,7 +44,7 @@ const pin = {
         }
       })
     })
-  },
+  }
 }
 
 module.exports = pin

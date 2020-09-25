@@ -2,6 +2,7 @@ const bcrypt = require('bcryptjs')
 const helper = require('../helpers/helpers')
 const userModels = require('../models/user')
 const jwt = require('jsonwebtoken')
+const fs = require('fs')
 
 module.exports = {
   register: async (req, res) => {
@@ -17,12 +18,11 @@ module.exports = {
       email,
       password,
       phone: '0123456789',
-      image: 'https://www.iconfinder.com/data/icons/ionicons/512/icon-ios7-contact-512.png',
+      image: 'https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true',
       balance: 0,
       createdAt: new Date()
     }
     bcrypt.genSalt(10, function (err, salt) {
-      console.log(data.password)
       bcrypt.hash(data.password, salt, function (err, hash) {
         data.password = hash
         userModels.register(data)
@@ -43,8 +43,6 @@ module.exports = {
 
         const user = result[0]
         const hash = user.password
-        console.log(password)
-        console.log(hash)
         bcrypt.compare(password, hash).then((resCompare) => {
           if (!resCompare) return helper.res(res, { message: 'Password is Wrong!' }, 403, null)
           const payload = {
@@ -98,12 +96,17 @@ module.exports = {
       })
       data.image = `http://localhost:4000/api/v1/uploads/${req.file.filename}`
     }
-    userModels.updateUser(id, data)
-    .then((result) => {
-      helper.res(res, result, 200, null)
-    })
-    .catch((err) => {
-      console.log(err)
+    bcrypt.genSalt(10, function (err, salt) {
+      bcrypt.hash(data.password, salt, function (err, hash) {
+        data.password = hash
+        userModels.updateUser(id, data)
+          .then((result) => {
+            helper.res(res, result, 201, null)
+          })
+          .catch((err) => {
+            console.log(err)
+          })
+      })
     })
   },
   deleteUser: (req, res) => {
@@ -136,19 +139,6 @@ module.exports = {
         console.log(err)
       })
   },
-  // getAllUser: (req, res) => {
-  //   userModels.getAllUser()
-  //     .then((result) => {
-  //       if (result.length > 0) {
-  //         helper.res(res, result, 200, null)
-  //       } else {
-  //         helper.res(res, [], 200, null)
-  //       }
-  //     })
-  //     .catch((err) => {
-  //       console.log(err)
-  //     })
-  // },
   getAllUser: (req, res) => {
     const search = req.query.search
     const limit = parseInt(req.query.limit)

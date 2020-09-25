@@ -34,9 +34,9 @@ const user = {
       })
     })
   },
-  getUserById: (id) => {
+  getUserById: (userId) => {
     return new Promise((resolve, reject) => {
-      connection.query('SELECT user.*, pin.pinId, pin.pin FROM user LEFT JOIN pin ON user.userId = pin.userId WHERE user.userId = ?', id, (err, result) => {
+      connection.query('SELECT user.*, pin.pinId, pin.pin FROM user LEFT JOIN pin ON user.userId = pin.userId WHERE user.userId = ?', userId, (err, result) => {
         if (!err) {
           resolve(result)
         } else {
@@ -78,9 +78,9 @@ const user = {
       })
     })
   },
-  deleteUser: (id) => {
+  deleteUser: (userId) => {
     return new Promise((resolve, reject) => {
-      connection.query('DELETE FROM user WHERE userId = ?', id, (err, result) => {
+      connection.query('DELETE FROM user WHERE userId = ?', userId, (err, result) => {
         if (!err) {
           resolve(result)
         } else {
@@ -91,7 +91,7 @@ const user = {
   },
   getSearchCount: (username) => {
     return new Promise((resolve, reject) => {
-      connection.query('SELECT COUNT(*) AS searchCount FROM user WHERE name LIKE ?', `%${username}%`, (err, result) => {
+      connection.query('SELECT COUNT(*) AS searchCount FROM user WHERE username LIKE ?', `%${username}%`, (err, result) => {
         if (!err) {
           resolve(result)
         } else {
