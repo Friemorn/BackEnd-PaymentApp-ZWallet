@@ -1,7 +1,4 @@
-# POS-App-Cafe-BackEnd
-
-## FLow of this REST API
-* [Flowchart](Flowchart_ufocafe.jpg)
+# BackEnd-PaymentApp-ZWallet
 
 ## Built With
 * [Node.js](https://nodejs.org/en/)
@@ -28,7 +25,6 @@ DB_PASSWORD = "your database password"
 DB_DATABASE = ufotable_cafe
 PORT = "your port"
 SECRET_KEY = "your secret key"
-PORT_REDIS = 6379
 
 ```
 
