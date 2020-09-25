@@ -2,9 +2,9 @@ const transactionModels = require('../models/transaction')
 const helper = require('../helpers/helpers')
 
 const transaction = {
-  getTransactionById: (req, res) => {
+  getTransactionBySenderId: (req, res) => {
     const id = req.params.id
-    transactionModels.getTransactionById(id)
+    transactionModels.getTransactionBySenderId(id)
       .then((result) => {
         if (result.length > 0) {
           helper.res(res, result, 200, null)

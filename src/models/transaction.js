@@ -1,9 +1,9 @@
 const connection = require('../configs/db')
 
 const transaction = {
-  getTransactionById: (id) => {
+  getTransactionBySenderId: (id) => {
     return new Promise((resolve, reject) => {
-      connection.query('SELECT * FROM transaction WHERE transactionId = ?', id, (err, result) => {
+      connection.query('SELECT * FROM transaction WHERE senderId = ?', id, (err, result) => {
         if (!err) {
           resolve(result)
         } else {
