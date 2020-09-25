@@ -6,7 +6,7 @@
 
 ## Requirements
 * [Node.js](https://nodejs.org/en/)
-* [Database](ufotable_cafe.sql)
+* [Database](payment.sql)
 * [Postman](Payment-App-ZWallet.postman_collection.json)
 
 ## Installation
