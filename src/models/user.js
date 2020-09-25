@@ -36,7 +36,7 @@ const user = {
   },
   getUserById: (id) => {
     return new Promise((resolve, reject) => {
-      connection.query('SELECT * FROM user WHERE userId = ?', id, (err, result) => {
+      connection.query('SELECT user.*, pin.pinId, pin.pin FROM user LEFT JOIN pin ON user.userId = pin.userId WHERE user.userId = ?', id, (err, result) => {
         if (!err) {
           resolve(result)
         } else {

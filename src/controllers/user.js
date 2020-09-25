@@ -16,13 +16,13 @@ module.exports = {
       lastName: 'Smith',
       email,
       password,
-      pin: 123456,
       phone: '0123456789',
       image: 'https://www.iconfinder.com/data/icons/ionicons/512/icon-ios7-contact-512.png',
       balance: 0,
       createdAt: new Date()
     }
     bcrypt.genSalt(10, function (err, salt) {
+      console.log(data.password)
       bcrypt.hash(data.password, salt, function (err, hash) {
         data.password = hash
         userModels.register(data)
@@ -57,7 +57,6 @@ module.exports = {
           jwt.sign(payload, process.env.SECRET_KEY, { expiresIn: '12h' }, (err, token) => {
             user.token = token
             delete user.password
-            delete user.pin
             delete user.phone
             delete user.image
             delete user.balance
@@ -78,7 +77,6 @@ module.exports = {
       lastName,
       email,
       password,
-      pin,
       phone,
       balance
     } = req.body
@@ -88,7 +86,6 @@ module.exports = {
       lastName,
       email,
       password,
-      pin,
       phone,
       balance
     }
