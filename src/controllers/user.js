@@ -136,17 +136,115 @@ module.exports = {
         console.log(err)
       })
   },
+  // getAllUser: (req, res) => {
+  //   userModels.getAllUser()
+  //     .then((result) => {
+  //       if (result.length > 0) {
+  //         helper.res(res, result, 200, null)
+  //       } else {
+  //         helper.res(res, [], 200, null)
+  //       }
+  //     })
+  //     .catch((err) => {
+  //       console.log(err)
+  //     })
+  // },
   getAllUser: (req, res) => {
-    userModels.getAllUser()
-      .then((result) => {
-        if (result.length > 0) {
-          helper.res(res, result, 200, null)
-        } else {
-          helper.res(res, [], 200, null)
-        }
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-  },
+    const search = req.query.search
+    const limit = parseInt(req.query.limit)
+    const page = parseInt(req.query.page)
+    const offset = (page - 1) * limit
+    const end = page * limit
+
+    let countData
+    let countSearch
+    let next
+    let previous
+    let resultPage
+    let endPage
+    let endPageSearch
+
+    userModels.getCount().then(result => {
+      countData = result[0].count
+      endPage = Math.ceil(countData / limit)
+    })
+    userModels.getSearchCount(search).then(result => {
+      countSearch = result[0].searchCount
+      endPageSearch = Math.ceil(countSearch / limit)
+    })
+
+    if (search) {
+      userModels.searchUser(search, limit, offset)
+        .then((result) => {
+          if (end < countSearch) {
+            next = {
+              'nextPage': page + 1,
+              'nextUrl': `http://localhost:4000/api/v1/user?search=${search}&page=${page + 1}&limit=${limit}`
+            }
+          }
+
+          if (offset > 0) {
+            previous = {
+              'previousPage': page - 1,
+              'previousUrl': `http://localhost:4000/api/v1/user?search=${search}&page=${page - 1}&limit=${limit}`
+            }
+          }
+
+          resultPage = {
+            'currentPage': page,
+            'perPage': limit,
+            'totalData': countSearch,
+            ...next,
+            ...previous,
+            'firstPage': 1,
+            'lastPage': endPageSearch
+          }
+
+          if (result.length > 0) {
+            helper.response(res, resultPage, result, 200, null)
+          } else {
+            helper.response(res, resultPage, [], 200, null)
+          }
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+      } else {
+      userModels.getAllUser(limit, offset)
+        .then((result) => {
+          if (end < countData) {
+            next = {
+              'nextPage': page + 1,
+              'nextUrl': `http://localhost:4000/api/v1/user?page=${page + 1}&limit=${limit}`
+            }
+          }
+
+          if (offset > 0) {
+            previous = {
+              'previousPage': page - 1,
+              'previousUrl': `http://localhost:4000/api/v1/user?page=${page - 1}&limit=${limit}`
+            }
+          }
+
+          resultPage = {
+            'currentPage': page,
+            'perPage': limit,
+            'totalData': countData,
+            ...next,
+            ...previous,
+            'firstPage': 1,
+            'lastPage': endPage
+          }
+
+          if (result.length > 0) {
+            helper.response(res, resultPage, result, 200, null)
+          } else {
+            helper.response(res, resultPage, [], 200, null)
+          }
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    }
+  }
 }
