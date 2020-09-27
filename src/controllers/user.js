@@ -139,6 +139,20 @@ module.exports = {
         console.log(err)
       })
   },
+  getUserByUsername: (req, res) => {
+    const username = req.params.username
+    userModels.getUserByUsername(username)
+      .then((result) => {
+        if (result.length > 0) {
+          helper.res(res, result, 200, null)
+        } else {
+          helper.res(res, [], 404, null)
+        }
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
   getAllUser: (req, res) => {
     const search = req.query.search
     const limit = parseInt(req.query.limit)

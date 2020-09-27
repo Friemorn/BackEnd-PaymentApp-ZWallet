@@ -23,9 +23,9 @@ const user = {
       })
     })
   },
-  getUserbyUsername: (username) => {
+  getUserByUsername: (username) => {
     return new Promise((resolve, reject) => {
-      connection.query('SELECT * FROM user WHERE username = ?', username, (err, result) => {
+      connection.query(`SELECT * FROM user WHERE username = '${username}'`, (err, result) => {
         if (!err) {
           resolve(result)
         } else {
