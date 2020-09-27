@@ -321,339 +321,167 @@
 			"name": "Transaction",
 			"item": [
 				{
-					"name": "Transaction Out",
-					"item": [
-						{
-							"name": "Add Transaction Out",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxMTk2NDI0LCJleHAiOjE2MDEyMzk2MjR9.Cv6sH0DLXP0iIDO_1hcxaQoEzJTux9ccgGh6d4YZo3U",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "urlencoded",
-									"urlencoded": [
-										{
-											"key": "senderId",
-											"value": "5",
-											"type": "text"
-										},
-										{
-											"key": "receiverId",
-											"value": "8",
-											"type": "text"
-										},
-										{
-											"key": "amount",
-											"value": "100000",
-											"type": "text"
-										},
-										{
-											"key": "notes",
-											"value": "Bayar Makan",
-											"type": "text"
-										},
-										{
-											"key": "",
-											"value": "",
-											"type": "text"
-										}
-									]
-								},
-								"url": {
-									"raw": "http://localhost:3000/api/v1/transactionOut",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "3000",
-									"path": [
-										"api",
-										"v1",
-										"transactionOut"
-									]
+					"name": "Add Transaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxMTk2NDI0LCJleHAiOjE2MDEyMzk2MjR9.Cv6sH0DLXP0iIDO_1hcxaQoEzJTux9ccgGh6d4YZo3U",
+									"type": "string"
 								}
-							},
-							"response": []
+							]
 						},
-						{
-							"name": "Get Transaction Out By User Id",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxMTk2NDI0LCJleHAiOjE2MDEyMzk2MjR9.Cv6sH0DLXP0iIDO_1hcxaQoEzJTux9ccgGh6d4YZo3U",
-											"type": "string"
-										}
-									]
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "senderId",
+									"value": "3",
+									"type": "text"
 								},
-								"method": "GET",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": []
+								{
+									"key": "receiverId",
+									"value": "1",
+									"type": "text"
 								},
-								"url": {
-									"raw": "http://localhost:3000/api/v1/transactionout/1",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "3000",
-									"path": [
-										"api",
-										"v1",
-										"transactionout",
-										"1"
-									]
+								{
+									"key": "amount",
+									"value": "100000",
+									"type": "text"
+								},
+								{
+									"key": "notes",
+									"value": "Bayar Minum",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
 								}
-							},
-							"response": []
+							]
 						},
-						{
-							"name": "Get All Transaction Out",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxMTk2NDI0LCJleHAiOjE2MDEyMzk2MjR9.Cv6sH0DLXP0iIDO_1hcxaQoEzJTux9ccgGh6d4YZo3U",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:3000/api/v1/transactionout",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "3000",
-									"path": [
-										"api",
-										"v1",
-										"transactionout"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Delete Transaction Out",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxMTk2NDI0LCJleHAiOjE2MDEyMzk2MjR9.Cv6sH0DLXP0iIDO_1hcxaQoEzJTux9ccgGh6d4YZo3U",
-											"type": "string"
-										}
-									]
-								},
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:3000/api/v1/transactionout/6",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "3000",
-									"path": [
-										"api",
-										"v1",
-										"transactionout",
-										"6"
-									]
-								}
-							},
-							"response": []
+						"url": {
+							"raw": "http://localhost:3000/api/v1/transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"transaction"
+							]
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					},
+					"response": []
 				},
 				{
-					"name": "Transaction In",
-					"item": [
-						{
-							"name": "Add Transaction In",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxMTk2NDI0LCJleHAiOjE2MDEyMzk2MjR9.Cv6sH0DLXP0iIDO_1hcxaQoEzJTux9ccgGh6d4YZo3U",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "urlencoded",
-									"urlencoded": [
-										{
-											"key": "senderId",
-											"value": "6",
-											"type": "text"
-										},
-										{
-											"key": "receiverId",
-											"value": "5",
-											"type": "text"
-										},
-										{
-											"key": "amount",
-											"value": "100000",
-											"type": "text"
-										},
-										{
-											"key": "notes",
-											"value": "Beli",
-											"type": "text"
-										}
-									]
-								},
-								"url": {
-									"raw": "http://localhost:3000/api/v1/transactionin",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "3000",
-									"path": [
-										"api",
-										"v1",
-										"transactionin"
-									]
+					"name": "Get Transaction By User Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxMTk2NDI0LCJleHAiOjE2MDEyMzk2MjR9.Cv6sH0DLXP0iIDO_1hcxaQoEzJTux9ccgGh6d4YZo3U",
+									"type": "string"
 								}
-							},
-							"response": []
+							]
 						},
-						{
-							"name": "Get Transaction In By User Id",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxMTk2NDI0LCJleHAiOjE2MDEyMzk2MjR9.Cv6sH0DLXP0iIDO_1hcxaQoEzJTux9ccgGh6d4YZo3U",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": []
-								},
-								"url": {
-									"raw": "http://localhost:3000/api/v1/transactionin/1",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "3000",
-									"path": [
-										"api",
-										"v1",
-										"transactionin",
-										"1"
-									]
-								}
-							},
-							"response": []
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
 						},
-						{
-							"name": "Get All Transaction In",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxMTk2NDI0LCJleHAiOjE2MDEyMzk2MjR9.Cv6sH0DLXP0iIDO_1hcxaQoEzJTux9ccgGh6d4YZo3U",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:3000/api/v1/transactionin",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "3000",
-									"path": [
-										"api",
-										"v1",
-										"transactionin"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Delete Transaction In",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxMTk2NDI0LCJleHAiOjE2MDEyMzk2MjR9.Cv6sH0DLXP0iIDO_1hcxaQoEzJTux9ccgGh6d4YZo3U",
-											"type": "string"
-										}
-									]
-								},
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:3000/api/v1/transactionin/5",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "3000",
-									"path": [
-										"api",
-										"v1",
-										"transactionin",
-										"5"
-									]
-								}
-							},
-							"response": []
+						"url": {
+							"raw": "http://localhost:3000/api/v1/transaction/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"transaction",
+								"1"
+							]
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Transaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxMTk2NDI0LCJleHAiOjE2MDEyMzk2MjR9.Cv6sH0DLXP0iIDO_1hcxaQoEzJTux9ccgGh6d4YZo3U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Transaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxMTk2NDI0LCJleHAiOjE2MDEyMzk2MjR9.Cv6sH0DLXP0iIDO_1hcxaQoEzJTux9ccgGh6d4YZo3U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/transaction/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"transaction",
+								"7"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
