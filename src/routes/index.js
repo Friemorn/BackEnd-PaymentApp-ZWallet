@@ -1,12 +1,14 @@
 const express = require('express')
 const userRoutes = require('./user')
 const pinRoutes = require('./pin')
-const transactionRoutes = require('./transaction')
+const transactionOutRoutes = require('./transactionOut')
+const transactionInRoutes = require('./transactionIn')
 const router = express.Router()
 
 router
   .use('/user', userRoutes)
   .use('/pin', pinRoutes)
-  .use('/transaction', transactionRoutes)
+  .use('/transactionout', transactionOutRoutes)
+  .use('/transactionin', transactionInRoutes)
 
 module.exports = router

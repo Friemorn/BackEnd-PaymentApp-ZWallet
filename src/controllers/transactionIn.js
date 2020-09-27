@@ -1,10 +1,10 @@
-const transactionModels = require('../models/transaction')
+const transactionInModels = require('../models/transactionIn')
 const helper = require('../helpers/helpers')
 
-const transaction = {
-  getTransactionBySenderId: (req, res) => {
+const transactionIn = {
+  getTransactionByReceiverId: (req, res) => {
     const id = req.params.id
-    transactionModels.getTransactionBySenderId(id)
+    transactionInModels.getTransactionByReceiverId(id)
       .then((result) => {
         if (result.length > 0) {
           helper.res(res, result, 200, null)
@@ -16,8 +16,8 @@ const transaction = {
         console.log(err)
       })
   },
-  getAllTransaction: (req, res) => {
-    transactionModels.getAllTransaction()
+  getAllTransactionIn: (req, res) => {
+    transactionInModels.getAllTransactionIn()
       .then((result) => {
         if (result.length > 0) {
           helper.res(res, result, 200, null)
@@ -29,7 +29,7 @@ const transaction = {
         console.log(err)
       })
   },
-  insertTransaction: (req, res) => {
+  insertTransactionIn: (req, res) => {
     const {
       senderId,
       receiverId,
@@ -43,7 +43,7 @@ const transaction = {
       createdAt: new Date(),
       notes
     }
-    transactionModels.insertTransaction(data)
+    transactionInModels.insertTransactionIn(data)
       .then((result) => {
         console.log(result)
         helper.res(res, result, 200, null)
@@ -52,9 +52,9 @@ const transaction = {
         console.log(err)
       })
   },
-  deleteTransaction: (req, res) => {
+  deleteTransactionIn: (req, res) => {
     const id = req.params.id
-    transactionModels.deleteTransaction(id)
+    transactionInModels.deleteTransactionIn(id)
       .then((result) => {
         helper.res(res, result, 200, null)
       })
@@ -64,4 +64,4 @@ const transaction = {
   }
 }
 
-module.exports = transaction
+module.exports = transactionIn
