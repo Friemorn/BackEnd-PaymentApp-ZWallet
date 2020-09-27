@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 25, 2020 at 06:27 PM
+-- Generation Time: Sep 27, 2020 at 11:43 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -50,10 +50,10 @@ INSERT INTO `pin` (`pinId`, `pin`, `userId`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `transaction`
+-- Table structure for table `transactionin`
 --
 
-CREATE TABLE `transaction` (
+CREATE TABLE `transactionin` (
   `transactionId` int(11) NOT NULL,
   `senderId` int(11) NOT NULL,
   `receiverId` int(11) NOT NULL,
@@ -63,13 +63,41 @@ CREATE TABLE `transaction` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `transaction`
+-- Dumping data for table `transactionin`
 --
 
-INSERT INTO `transaction` (`transactionId`, `senderId`, `receiverId`, `amount`, `createdAt`, `notes`) VALUES
+INSERT INTO `transactionin` (`transactionId`, `senderId`, `receiverId`, `amount`, `createdAt`, `notes`) VALUES
+(1, 1, 2, 100000, '2020-09-27 08:56:25', 'Buat Kondangan'),
+(2, 2, 3, 200000, '2020-09-27 08:57:04', 'Bayar Utang'),
+(3, 7, 8, 2500000, '2020-09-27 08:57:34', 'Beli Perfect Grade Gundam'),
+(4, 6, 1, 100000, '2020-09-27 08:57:58', 'Beli Pulsa'),
+(5, 2, 1, 40000, '2020-09-27 09:12:00', 'test');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transactionout`
+--
+
+CREATE TABLE `transactionout` (
+  `transactionId` int(11) NOT NULL,
+  `senderId` int(11) NOT NULL,
+  `receiverId` int(11) NOT NULL,
+  `amount` int(11) NOT NULL,
+  `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `notes` varchar(512) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `transactionout`
+--
+
+INSERT INTO `transactionout` (`transactionId`, `senderId`, `receiverId`, `amount`, `createdAt`, `notes`) VALUES
 (1, 1, 2, 100000, '2020-09-25 16:09:47', 'Buat Kondangan'),
 (2, 2, 3, 200000, '2020-09-25 16:11:36', 'Bayar Utang'),
-(3, 7, 8, 2500000, '2020-09-25 16:13:44', 'Beli Perfect Grade Gundam');
+(3, 7, 8, 2500000, '2020-09-25 16:13:44', 'Beli Perfect Grade Gundam'),
+(5, 6, 1, 100000, '2020-09-27 08:13:06', 'Beli Pulsa'),
+(6, 1, 2, 40000, '2020-09-27 09:18:04', 'test');
 
 -- --------------------------------------------------------
 
@@ -116,9 +144,16 @@ ALTER TABLE `pin`
   ADD KEY `pin_ibfk_1` (`userId`);
 
 --
--- Indexes for table `transaction`
+-- Indexes for table `transactionin`
 --
-ALTER TABLE `transaction`
+ALTER TABLE `transactionin`
+  ADD PRIMARY KEY (`transactionId`),
+  ADD KEY `transactionin_ibfk_1` (`receiverId`);
+
+--
+-- Indexes for table `transactionout`
+--
+ALTER TABLE `transactionout`
   ADD PRIMARY KEY (`transactionId`),
   ADD KEY `transaction_ibfk_1` (`senderId`);
 
@@ -139,10 +174,16 @@ ALTER TABLE `pin`
   MODIFY `pinId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `transaction`
+-- AUTO_INCREMENT for table `transactionin`
 --
-ALTER TABLE `transaction`
-  MODIFY `transactionId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+ALTER TABLE `transactionin`
+  MODIFY `transactionId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `transactionout`
+--
+ALTER TABLE `transactionout`
+  MODIFY `transactionId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -161,10 +202,16 @@ ALTER TABLE `pin`
   ADD CONSTRAINT `pin_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `transaction`
+-- Constraints for table `transactionin`
 --
-ALTER TABLE `transaction`
-  ADD CONSTRAINT `transaction_ibfk_1` FOREIGN KEY (`senderId`) REFERENCES `user` (`userId`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `transactionin`
+  ADD CONSTRAINT `transactionin_ibfk_1` FOREIGN KEY (`receiverId`) REFERENCES `user` (`userId`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `transactionout`
+--
+ALTER TABLE `transactionout`
+  ADD CONSTRAINT `transactionout_ibfk_1` FOREIGN KEY (`senderId`) REFERENCES `user` (`userId`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
