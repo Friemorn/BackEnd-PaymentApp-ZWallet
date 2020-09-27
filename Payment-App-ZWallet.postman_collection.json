@@ -120,6 +120,39 @@
 					"response": []
 				},
 				{
+					"name": "Get User By Username",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxMjI2MTgyLCJleHAiOjE2MDEyNjkzODJ9.ygsRRnvXdbdu3P_1YzewmXOSLrNfV5bT0VQ5igEuXsQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/username/dewo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"username",
+								"dewo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get All User & Sort By Username",
 					"request": {
 						"auth": {
