@@ -1,9 +1,9 @@
 const connection = require('../configs/db')
 
-const transactionIn = {
-  getTransactionByReceiverId: (id) => {
+const transaction = {
+  getTransactionByUserId: (id) => {
     return new Promise((resolve, reject) => {
-      connection.query('SELECT * FROM transactionin WHERE receiverId = ? ORDER BY createdAt DESC', id, (err, result) => {
+      connection.query(`SELECT * FROM transaction WHERE senderId = ${id} UNION ALL SELECT * FROM transaction WHERE receiverId = ${id} ORDER BY createdAt DESC`, (err, result) => {
         if (!err) {
           resolve(result)
         } else {
@@ -12,9 +12,9 @@ const transactionIn = {
       })
     })
   },
-  getAllTransactionIn: () => {
+  getAllTransaction: () => {
     return new Promise((resolve, reject) => {
-      connection.query(`SELECT * FROM transactionin`, (err, result) => {
+      connection.query(`SELECT * FROM transaction`, (err, result) => {
         if (!err) {
           resolve(result)
         } else {
@@ -23,9 +23,9 @@ const transactionIn = {
       })
     })
   },
-  deleteTransactionIn: (id) => {
+  deleteTransaction: (id) => {
     return new Promise((resolve, reject) => {
-      connection.query('DELETE FROM transactionin WHERE transactionId = ?', id, (err, result) => {
+      connection.query('DELETE FROM transaction WHERE transactionId = ?', id, (err, result) => {
         if (!err) {
           resolve(result)
         } else {
@@ -34,9 +34,9 @@ const transactionIn = {
       })
     })
   },
-  insertTransactionIn: (data) => {
+  insertTransaction: (data) => {
     return new Promise((resolve, reject) => {
-      connection.query('INSERT INTO transactionin SET ?', data, (err, result) => {
+      connection.query('INSERT INTO transaction SET ?', data, (err, result) => {
         if (!err) {
           resolve(result)
         } else {
@@ -47,4 +47,4 @@ const transactionIn = {
   }
 }
 
-module.exports = transactionIn
+module.exports = transaction
