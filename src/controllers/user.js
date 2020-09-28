@@ -7,7 +7,7 @@ const fs = require('fs')
 module.exports = {
   register: async (req, res) => {
     const { username, email, password } = req.body
-    const isUsername = await userModels.getUserbyUsername(username)
+    const isUsername = await userModels.getUserByUsername(username)
     const isUser = await userModels.getUserbyEmail(email)
     if (isUsername.length !== 0) return helper.res(res, { message: 'Username is Already Exist' }, 403, null)
     if (isUser.length !== 0) return helper.res(res, { message: 'Email is Already Registered' }, 403, null)
