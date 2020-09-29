@@ -25,7 +25,7 @@ const user = {
   },
   getUserByUsername: (username) => {
     return new Promise((resolve, reject) => {
-      connection.query(`SELECT * FROM user WHERE username = '${username}'`, (err, result) => {
+      connection.query(`SELECT user.*, pin.pinId, pin.pin FROM user LEFT JOIN pin ON user.userId = pin.userId WHERE user.username = '${username}'`, (err, result) => {
         if (!err) {
           resolve(result)
         } else {
