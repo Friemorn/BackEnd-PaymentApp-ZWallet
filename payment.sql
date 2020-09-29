@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 29, 2020 at 06:46 PM
+-- Generation Time: Sep 29, 2020 at 06:50 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -56,7 +56,7 @@ INSERT INTO `pin` (`pinId`, `pin`, `userId`) VALUES
 CREATE TABLE `transaction` (
   `transactionId` int(11) NOT NULL,
   `senderId` int(11) NOT NULL,
-  `senderName` int(64) NOT NULL,
+  `senderName` varchar(64) NOT NULL,
   `receiverId` int(11) NOT NULL,
   `receiverName` varchar(64) NOT NULL,
   `amount` int(11) NOT NULL,
@@ -69,11 +69,11 @@ CREATE TABLE `transaction` (
 --
 
 INSERT INTO `transaction` (`transactionId`, `senderId`, `senderName`, `receiverId`, `receiverName`, `amount`, `createdAt`, `notes`) VALUES
-(1, 1, 0, 2, '', 100000, '2020-09-25 16:09:47', 'Buat Kondangan'),
-(2, 2, 0, 3, '', 200000, '2020-09-25 16:11:36', 'Bayar Utang'),
-(3, 7, 0, 8, '', 2500000, '2020-09-25 16:13:44', 'Beli Perfect Grade Gundam'),
-(5, 6, 0, 1, '', 100000, '2020-09-27 08:13:06', 'Beli Pulsa'),
-(6, 1, 0, 2, '', 40000, '2020-09-27 09:18:04', 'test');
+(1, 1, 'soloplayer', 2, 'dewo', 100000, '2020-09-29 16:48:54', 'Buat Kondangan'),
+(2, 2, 'dewo', 3, 'alan', 200000, '2020-09-29 16:49:32', 'Bayar Utang'),
+(3, 7, 'dewondo', 8, 'friemorn', 2500000, '2020-09-29 16:49:40', 'Beli Perfect Grade Gundam'),
+(5, 6, 'ardiyanto', 1, 'soloplayer', 100000, '2020-09-29 16:49:19', 'Beli Pulsa'),
+(6, 1, 'soloplayer', 2, 'dewo', 40000, '2020-09-29 16:49:00', 'test');
 
 -- --------------------------------------------------------
 
