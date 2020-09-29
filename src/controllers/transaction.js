@@ -32,13 +32,17 @@ const transaction = {
   insertTransaction: (req, res) => {
     const {
       senderId,
+      senderName,
       receiverId,
+      receiverName,
       amount,
       notes
     } = req.body
     const data = {
       senderId,
+      senderName,
       receiverId,
+      receiverName,
       amount,
       createdAt: new Date(),
       notes

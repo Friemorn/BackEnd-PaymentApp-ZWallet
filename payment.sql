@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 27, 2020 at 03:29 PM
+-- Generation Time: Sep 29, 2020 at 06:46 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -56,7 +56,9 @@ INSERT INTO `pin` (`pinId`, `pin`, `userId`) VALUES
 CREATE TABLE `transaction` (
   `transactionId` int(11) NOT NULL,
   `senderId` int(11) NOT NULL,
+  `senderName` int(64) NOT NULL,
   `receiverId` int(11) NOT NULL,
+  `receiverName` varchar(64) NOT NULL,
   `amount` int(11) NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `notes` varchar(512) NOT NULL
@@ -66,12 +68,12 @@ CREATE TABLE `transaction` (
 -- Dumping data for table `transaction`
 --
 
-INSERT INTO `transaction` (`transactionId`, `senderId`, `receiverId`, `amount`, `createdAt`, `notes`) VALUES
-(1, 1, 2, 100000, '2020-09-25 16:09:47', 'Buat Kondangan'),
-(2, 2, 3, 200000, '2020-09-25 16:11:36', 'Bayar Utang'),
-(3, 7, 8, 2500000, '2020-09-25 16:13:44', 'Beli Perfect Grade Gundam'),
-(5, 6, 1, 100000, '2020-09-27 08:13:06', 'Beli Pulsa'),
-(6, 1, 2, 40000, '2020-09-27 09:18:04', 'test');
+INSERT INTO `transaction` (`transactionId`, `senderId`, `senderName`, `receiverId`, `receiverName`, `amount`, `createdAt`, `notes`) VALUES
+(1, 1, 0, 2, '', 100000, '2020-09-25 16:09:47', 'Buat Kondangan'),
+(2, 2, 0, 3, '', 200000, '2020-09-25 16:11:36', 'Bayar Utang'),
+(3, 7, 0, 8, '', 2500000, '2020-09-25 16:13:44', 'Beli Perfect Grade Gundam'),
+(5, 6, 0, 1, '', 100000, '2020-09-27 08:13:06', 'Beli Pulsa'),
+(6, 1, 0, 2, '', 40000, '2020-09-27 09:18:04', 'test');
 
 -- --------------------------------------------------------
 
@@ -104,7 +106,8 @@ INSERT INTO `user` (`userId`, `username`, `firstName`, `lastName`, `email`, `pas
 (5, 'kusuma', 'John', 'Smith', 'kusuma@gmail.com', '$2a$10$zwRx1N/pBaKba2K7Anr/L.EQmuYtzeao913gGw1IORexdCPT8jeO6', '0123456789', 'https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true', 700000, '2020-09-25 16:12:56'),
 (6, 'ardiyanto', 'John', 'Smith', 'ardiyanto@gmail.com', '$2a$10$N8X6ke.fCgmIRq6jVF86bOb254iC0FokcX0FHHrnj7jlNNqx/AJ0e', '0123456789', 'https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true', 500000, '2020-09-25 16:12:52'),
 (7, 'dewondo', 'John', 'Smith', 'dewondo@gmail.com', '$2a$10$WhlB6xFAsIfetPqeI4QtGOAoP6lCrbggc0tEuLS0f0BDaVuCRSP9K', '0123456789', 'https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true', 5000000, '2020-09-25 16:13:03'),
-(8, 'friemorn', 'John', 'Smith', 'friemorn@gmail.com', '$2a$10$uWoZHIj89TjqY.ajvLR79uAyfzOc/xf4KmlE7rW9C4enxRM2HGtxW', '0123456789', 'https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true', 2500000, '2020-09-25 16:13:08');
+(8, 'friemorn', 'John', 'Smith', 'friemorn@gmail.com', '$2a$10$uWoZHIj89TjqY.ajvLR79uAyfzOc/xf4KmlE7rW9C4enxRM2HGtxW', '0123456789', 'https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true', 2500000, '2020-09-25 16:13:08'),
+(11, 'gilgamesh', 'John', 'Smith', 'kingofuruk@gmail.com', '$2a$10$2i1l/srQ5SNrvyt/Tk3db.nD59CBsOpvvCurnYN6QGn2j7LraycRm', '0123456789', 'https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true', 0, '2020-09-28 01:18:36');
 
 --
 -- Indexes for dumped tables
@@ -150,7 +153,7 @@ ALTER TABLE `transaction`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables
