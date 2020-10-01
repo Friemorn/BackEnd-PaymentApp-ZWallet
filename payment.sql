@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 01, 2020 at 11:10 AM
+-- Generation Time: Oct 01, 2020 at 11:46 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -145,14 +145,14 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`userId`, `username`, `firstName`, `lastName`, `email`, `password`, `image`, `balance`, `createdAt`) VALUES
-(1, 'soloplayer', 'John', 'Smith', 'soloplayer@gmail.com', '$2a$10$5ykbYimPSraVwAPZDjiMv.k2o1vjnofw2BHjypbuWOzFUaAai4YSm', 'https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true', 200000, '2020-09-25 16:08:52'),
-(3, 'alan', 'John', 'Smith', 'alan@gmail.com', '$2a$10$ivM46XQtjQerEzE.m5u9p.lMJOoHLiIU04UoMKfVIiBuN7a4S/tWS', 'https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true', 500000, '2020-09-25 16:10:19'),
-(4, 'erlangga', 'John', 'Smith', 'erlangga@gmail.com', '$2a$10$So6ij.pe/PtAsNt7OJFjd.4OhrD91I9mDoYw5FflTJ.Ke1plRiwR2', 'https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true', 200000, '2020-09-25 16:10:30'),
-(5, 'kusuma', 'John', 'Smith', 'kusuma@gmail.com', '$2a$10$zwRx1N/pBaKba2K7Anr/L.EQmuYtzeao913gGw1IORexdCPT8jeO6', 'https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true', 700000, '2020-09-25 16:12:56'),
-(6, 'ardiyanto', 'John', 'Smith', 'ardiyanto@gmail.com', '$2a$10$N8X6ke.fCgmIRq6jVF86bOb254iC0FokcX0FHHrnj7jlNNqx/AJ0e', 'https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true', 500000, '2020-09-25 16:12:52'),
-(7, 'dewondo', 'John', 'Smith', 'dewondo@gmail.com', '$2a$10$WhlB6xFAsIfetPqeI4QtGOAoP6lCrbggc0tEuLS0f0BDaVuCRSP9K', 'https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true', 5000000, '2020-09-25 16:13:03'),
-(8, 'friemorn', 'John', 'Smith', 'friemorn@gmail.com', '$2a$10$uWoZHIj89TjqY.ajvLR79uAyfzOc/xf4KmlE7rW9C4enxRM2HGtxW', 'https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true', 2500000, '2020-09-25 16:13:08'),
-(11, 'Gilgamesh', 'Golden', 'King', 'kingofuruk@gmail.com', '$2a$10$v1XoE7hWkN2SXl0MsSEQPeRKB.D5YQOmPmPiG9gTwGMqlBHStuYdq', 'https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true', 99999999, '2020-10-01 06:04:12');
+(1, 'soloplayer', 'Solo', 'Player', 'soloplayer@gmail.com', '$2a$10$5ykbYimPSraVwAPZDjiMv.k2o1vjnofw2BHjypbuWOzFUaAai4YSm', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_39_10.870Zflat,800x800,075,t.jpg', 200000, '2020-10-01 09:39:10'),
+(3, 'alan', 'Alan', 'Ardiyanto', 'alan@gmail.com', '$2a$10$ivM46XQtjQerEzE.m5u9p.lMJOoHLiIU04UoMKfVIiBuN7a4S/tWS', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_40_41.720Zvist.jpg', 500000, '2020-10-01 09:40:41'),
+(4, 'erlangga', 'Erlangga', 'Jatikusuma', 'erlangga@gmail.com', '$2a$10$So6ij.pe/PtAsNt7OJFjd.4OhrD91I9mDoYw5FflTJ.Ke1plRiwR2', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_41_46.564ZTekkadan-Logo-4.png', 200000, '2020-10-01 09:41:46'),
+(5, 'kusuma', 'Kusuma', 'Erlangga', 'kusuma@gmail.com', '$2a$10$zwRx1N/pBaKba2K7Anr/L.EQmuYtzeao913gGw1IORexdCPT8jeO6', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_42_48.008Zflat,800x800,075,t.jpg', 700000, '2020-10-01 09:42:48'),
+(6, 'ardiyanto', 'Ardiyanto', 'Alan', 'ardiyanto@gmail.com', '$2a$10$N8X6ke.fCgmIRq6jVF86bOb254iC0FokcX0FHHrnj7jlNNqx/AJ0e', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_43_26.991Zflat,800x800,075,t.jpg', 500000, '2020-10-01 09:43:26'),
+(7, 'dewondo', 'Dewondo', 'Friemorn', 'dewondo@gmail.com', '$2a$10$WhlB6xFAsIfetPqeI4QtGOAoP6lCrbggc0tEuLS0f0BDaVuCRSP9K', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_44_12.090Ztibo.jpg', 5000000, '2020-10-01 09:44:12'),
+(8, 'friemorn', 'Friemorn', 'Dewondo', 'friemorn@gmail.com', '$2a$10$uWoZHIj89TjqY.ajvLR79uAyfzOc/xf4KmlE7rW9C4enxRM2HGtxW', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_44_52.539Ztibo.jpg', 2500000, '2020-10-01 09:44:52'),
+(11, 'gil', 'King', 'Gilgamesh', 'kingofuruk@gmail.com', '$2a$10$v1XoE7hWkN2SXl0MsSEQPeRKB.D5YQOmPmPiG9gTwGMqlBHStuYdq', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_45_32.746Z5302518.png', 99999999, '2020-10-01 09:45:32');
 
 --
 -- Indexes for dumped tables

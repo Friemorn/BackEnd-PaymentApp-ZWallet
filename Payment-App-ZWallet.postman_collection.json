@@ -253,7 +253,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxNDU1MDU0LCJleHAiOjE2MDE0OTgyNTR9.hAdGDIwl6t4xdSmFcNJ3g2cimOTOkOHDIGCHB_Pq6V8",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExLCJlbWFpbCI6ImtpbmdvZnVydWtAZ21haWwuY29tIiwidXNlcm5hbWUiOiJHaWxnYW1lc2giLCJmaXJzdE5hbWUiOiJHb2xkZW4iLCJsYXN0TmFtZSI6IktpbmciLCJpYXQiOjE2MDE1MTkzNjEsImV4cCI6MTYwMTU2MjU2MX0.a-BKcCEc0MfJTpMSwU7965TtaUan2ZPOujbPluQoz1E",
 									"type": "string"
 								}
 							]
@@ -265,23 +265,23 @@
 							"formdata": [
 								{
 									"key": "username",
-									"value": "Gilgamesh",
+									"value": "gil",
 									"type": "text"
 								},
 								{
 									"key": "firstName",
-									"value": "Golden",
+									"value": "King",
 									"type": "text"
 								},
 								{
 									"key": "lastName",
-									"value": "King",
+									"value": "Gilgamesh",
 									"type": "text"
 								},
 								{
 									"key": "image",
 									"type": "file",
-									"src": []
+									"src": "/C:/Users/Dewondo Friemorn/Downloads/Images/5302518.png"
 								},
 								{
 									"key": "",
@@ -372,7 +372,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxMTk2NDI0LCJleHAiOjE2MDEyMzk2MjR9.Cv6sH0DLXP0iIDO_1hcxaQoEzJTux9ccgGh6d4YZo3U",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExLCJlbWFpbCI6ImtpbmdvZnVydWtAZ21haWwuY29tIiwidXNlcm5hbWUiOiJHaWxnYW1lc2giLCJmaXJzdE5hbWUiOiJHb2xkZW4iLCJsYXN0TmFtZSI6IktpbmciLCJpYXQiOjE2MDE1MTkzNjEsImV4cCI6MTYwMTU2MjU2MX0.a-BKcCEc0MfJTpMSwU7965TtaUan2ZPOujbPluQoz1E",
 									"type": "string"
 								}
 							]
@@ -383,28 +383,43 @@
 							"mode": "urlencoded",
 							"urlencoded": [
 								{
+									"key": "userId",
+									"value": "7",
+									"type": "text"
+								},
+								{
 									"key": "senderId",
-									"value": "3",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "senderName",
+									"value": "dewondo",
 									"type": "text"
 								},
 								{
 									"key": "receiverId",
-									"value": "1",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "receiverName",
+									"value": "Gilgamesh",
 									"type": "text"
 								},
 								{
 									"key": "amount",
-									"value": "100000",
+									"value": "50000",
+									"type": "text"
+								},
+								{
+									"key": "statusId",
+									"value": "1",
 									"type": "text"
 								},
 								{
 									"key": "notes",
-									"value": "Bayar Minum",
-									"type": "text"
-								},
-								{
-									"key": "",
-									"value": "",
+									"value": "Buat Makan",
 									"type": "text"
 								}
 							]
@@ -436,7 +451,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxMTk2NDI0LCJleHAiOjE2MDEyMzk2MjR9.Cv6sH0DLXP0iIDO_1hcxaQoEzJTux9ccgGh6d4YZo3U",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExLCJlbWFpbCI6ImtpbmdvZnVydWtAZ21haWwuY29tIiwidXNlcm5hbWUiOiJHaWxnYW1lc2giLCJmaXJzdE5hbWUiOiJHb2xkZW4iLCJsYXN0TmFtZSI6IktpbmciLCJpYXQiOjE2MDE1MTkzNjEsImV4cCI6MTYwMTU2MjU2MX0.a-BKcCEc0MfJTpMSwU7965TtaUan2ZPOujbPluQoz1E",
 									"type": "string"
 								}
 							]
