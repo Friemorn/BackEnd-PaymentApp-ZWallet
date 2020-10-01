@@ -17,7 +17,7 @@ module.exports = {
       lastName: 'LastName',
       email,
       password,
-      image: 'https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true',
+      image: process.env.BASE_URL+`/uploads/${req.file.filename}`,
       balance: 0,
       createdAt: new Date()
     }
