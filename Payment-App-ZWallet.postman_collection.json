@@ -270,12 +270,12 @@
 							"formdata": [
 								{
 									"key": "username",
-									"value": "arthuria",
+									"value": "arthur",
 									"type": "text"
 								},
 								{
 									"key": "firstName",
-									"value": "Arthuria",
+									"value": "Arthur",
 									"type": "text"
 								},
 								{
@@ -315,7 +315,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/v1/user/13",
+							"raw": "http://localhost:3000/api/v1/user/15",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -325,7 +325,7 @@
 								"api",
 								"v1",
 								"user",
-								"13"
+								"15"
 							]
 						}
 					},
