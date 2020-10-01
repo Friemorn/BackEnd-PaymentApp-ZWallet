@@ -13,11 +13,10 @@ module.exports = {
     if (isUser.length !== 0) return helper.res(res, { message: 'Email is Already Registered' }, 403, null)
     const data = {
       username,
-      firstName: 'John',
-      lastName: 'Smith',
+      firstName: 'First Name',
+      lastName: 'LastName',
       email,
       password,
-      phone: '0123456789',
       image: 'https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true',
       balance: 0,
       createdAt: new Date()
@@ -55,7 +54,6 @@ module.exports = {
           jwt.sign(payload, process.env.SECRET_KEY, { expiresIn: '12h' }, (err, token) => {
             user.token = token
             delete user.password
-            delete user.phone
             delete user.image
             delete user.balance
             delete user.createdAt
@@ -72,48 +70,36 @@ module.exports = {
     const {
       username,
       firstName,
-      lastName,
-      email,
-      password,
-      phone,
-      balance
+      lastName
     } = req.body
     const data = {
       username,
       firstName,
-      lastName,
-      email,
-      password,
-      phone,
-      balance
+      lastName
     }
     if (req.file) {
       userModels.getUserById(id).then(result => {
         const user = result[0]
-        const img = user.image.replace('http://localhost:4000/api/v1/uploads/', '')
+        const img = user.image.replace(`${process.env.BASE_URL}/uploads/`, '')
         const filePath = `./uploads/${img}`;
         fs.unlinkSync(filePath)
       })
-      data.image = `http://localhost:4000/api/v1/uploads/${req.file.filename}`
+      data.image = `${process.env.BASE_URL}/uploads/${req.file.filename}`
     }
-    bcrypt.genSalt(10, function (err, salt) {
-      bcrypt.hash(data.password, salt, function (err, hash) {
-        data.password = hash
-        userModels.updateUser(id, data)
-          .then((result) => {
-            helper.res(res, result, 201, null)
-          })
-          .catch((err) => {
-            console.log(err)
-          })
+    userModels.updateUser(id, data)
+      .then((result) => {
+        console.log(result)
+        helper.res(res, result, 200, null)
       })
-    })
+      .catch((err) => {
+        console.log(err)
+      })
   },
   deleteUser: (req, res) => {
     const id = req.params.id
     userModels.getUserById(id).then(result => {
       const user = result[0]
-      const img = user.image.replace('http://localhost:4000/api/v1/uploads/', '')
+      const img = user.image.replace(`${process.env.BASE_URL}/uploads/`, '')
       const filePath = `./uploads/${img}`
       fs.unlinkSync(filePath)
     })
@@ -183,14 +169,14 @@ module.exports = {
           if (end < countSearch) {
             next = {
               'nextPage': page + 1,
-              'nextUrl': `http://localhost:4000/api/v1/user?search=${search}&page=${page + 1}&limit=${limit}`
+              'nextUrl': `${process.env.BASE_URL}/user?search=${search}&page=${page + 1}&limit=${limit}`
             }
           }
 
           if (offset > 0) {
             previous = {
               'previousPage': page - 1,
-              'previousUrl': `http://localhost:4000/api/v1/user?search=${search}&page=${page - 1}&limit=${limit}`
+              'previousUrl': `${process.env.BASE_URL}/user?search=${search}&page=${page - 1}&limit=${limit}`
             }
           }
 
@@ -219,14 +205,14 @@ module.exports = {
           if (end < countData) {
             next = {
               'nextPage': page + 1,
-              'nextUrl': `http://localhost:4000/api/v1/user?page=${page + 1}&limit=${limit}`
+              'nextUrl': `${process.env.BASE_URL}/user?page=${page + 1}&limit=${limit}`
             }
           }
 
           if (offset > 0) {
             previous = {
               'previousPage': page - 1,
-              'previousUrl': `http://localhost:4000/api/v1/user?page=${page - 1}&limit=${limit}`
+              'previousUrl': `${process.env.BASE_URL}/user?page=${page - 1}&limit=${limit}`
             }
           }
 
@@ -250,5 +236,38 @@ module.exports = {
           console.log(err)
         })
     }
+  },
+  updatePassword: async (req, res) => {
+    const id = req.params.id
+    const {
+      password
+    } = req.body
+    const data = {
+      password
+    }
+    userModels.getUserById(id)
+      .then((result) => {
+        const user = result[0]
+        console.log(user)
+        const hash = user.password
+    bcrypt.compare(password, hash).then((resCompare) => {
+      if (!resCompare) return helper.res(res, { message: "Don't Use Old Password" }, 403, null)
+      bcrypt.genSalt(10, function (err, salt) {
+        bcrypt.hash(data.password, salt, function (err, hash) {
+          data.password = hash
+          userModels.updateUser(id, data)
+            .then((result) => {
+              helper.res(res, result, 201, null)
+            })
+            .catch((err) => {
+              console.log(err)
+            })
+          })
+        })
+      })
+      .catch((err) => {
+      console.log(err)
+      })
+    })
   }
 }

@@ -95,7 +95,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIiwidXNlcm5hbWUiOiJ0ZXN0MiIsImZpcnN0TmFtZSI6IkpvaG4iLCJsYXN0TmFtZSI6IlNtaXRoIiwiaWF0IjoxNjAxMDAyMjYyLCJleHAiOjE2MDEwNDU0NjJ9.DHu0BShNTBX5v7lVwTfgr1Pded9gCr2gL9bxeubBu-w",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxNDU1MDU0LCJleHAiOjE2MDE0OTgyNTR9.hAdGDIwl6t4xdSmFcNJ3g2cimOTOkOHDIGCHB_Pq6V8",
 									"type": "string"
 								}
 							]
@@ -103,7 +103,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/v1/user/1",
+							"raw": "http://localhost:3000/api/v1/user/11",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -113,7 +113,7 @@
 								"api",
 								"v1",
 								"user",
-								"1"
+								"11"
 							]
 						}
 					},
@@ -127,7 +127,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxMjI2MTgyLCJleHAiOjE2MDEyNjkzODJ9.ygsRRnvXdbdu3P_1YzewmXOSLrNfV5bT0VQ5igEuXsQ",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxNDU1MDU0LCJleHAiOjE2MDE0OTgyNTR9.hAdGDIwl6t4xdSmFcNJ3g2cimOTOkOHDIGCHB_Pq6V8",
 									"type": "string"
 								}
 							]
@@ -135,7 +135,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/v1/user/username/dewo",
+							"raw": "http://localhost:3000/api/v1/user/username/Dewondo",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -146,7 +146,7 @@
 								"v1",
 								"user",
 								"username",
-								"dewo"
+								"Dewondo"
 							]
 						}
 					},
@@ -160,7 +160,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGV3b0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6ImRld28iLCJmaXJzdE5hbWUiOiJKb2huIiwibGFzdE5hbWUiOiJTbWl0aCIsImlhdCI6MTYwMTA0MzcxMCwiZXhwIjoxNjAxMDg2OTEwfQ.45u3oCV6SctfJzWVDUOdC9XbDRoa-Sq0Ha9fBQUfGgQ",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxNDU1MDU0LCJleHAiOjE2MDE0OTgyNTR9.hAdGDIwl6t4xdSmFcNJ3g2cimOTOkOHDIGCHB_Pq6V8",
 									"type": "string"
 								}
 							]
@@ -168,7 +168,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/v1/user?page=1&limit=3",
+							"raw": "http://localhost:3000/api/v1/user?page=2&limit=3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -182,7 +182,7 @@
 							"query": [
 								{
 									"key": "page",
-									"value": "1"
+									"value": "2"
 								},
 								{
 									"key": "limit",
@@ -195,19 +195,26 @@
 				},
 				{
 					"name": "Search User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGV3b0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6ImRld28iLCJmaXJzdE5hbWUiOiJKb2huIiwibGFzdE5hbWUiOiJTbWl0aCIsImlhdCI6MTYwMTA0MzcxMCwiZXhwIjoxNjAxMDg2OTEwfQ.45u3oCV6SctfJzWVDUOdC9XbDRoa-Sq0Ha9fBQUfGgQ",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxNDU1MDU0LCJleHAiOjE2MDE0OTgyNTR9.hAdGDIwl6t4xdSmFcNJ3g2cimOTOkOHDIGCHB_Pq6V8",
 									"type": "string"
 								}
 							]
 						},
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
 						"url": {
 							"raw": "http://localhost:3000/api/v1/user?search=de&page=1&limit=3",
 							"protocol": "http",
@@ -246,7 +253,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGV3b0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6ImRld28iLCJmaXJzdE5hbWUiOiJKb2huIiwibGFzdE5hbWUiOiJTbWl0aCIsImlhdCI6MTYwMTA0MzcxMCwiZXhwIjoxNjAxMDg2OTEwfQ.45u3oCV6SctfJzWVDUOdC9XbDRoa-Sq0Ha9fBQUfGgQ",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxNDU1MDU0LCJleHAiOjE2MDE0OTgyNTR9.hAdGDIwl6t4xdSmFcNJ3g2cimOTOkOHDIGCHB_Pq6V8",
 									"type": "string"
 								}
 							]
@@ -258,48 +265,52 @@
 							"formdata": [
 								{
 									"key": "username",
-									"value": "dewo",
+									"value": "Gilgamesh",
 									"type": "text"
 								},
 								{
 									"key": "firstName",
-									"value": "Dewondo",
+									"value": "Golden",
 									"type": "text"
 								},
 								{
 									"key": "lastName",
-									"value": "Friemorn",
-									"type": "text"
-								},
-								{
-									"key": "email",
-									"value": "df7@gmail.com",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "df7",
-									"type": "text"
-								},
-								{
-									"key": "phone",
-									"value": "08123456789",
+									"value": "King",
 									"type": "text"
 								},
 								{
 									"key": "image",
 									"type": "file",
-									"src": "/C:/Users/Dewondo Friemorn/Downloads/Images/tibo.jpg"
+									"src": []
 								},
 								{
-									"key": "balance",
-									"value": "999999999",
-									"type": "text"
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/v1/user/2",
+							"raw": "http://localhost:3000/api/v1/user/11",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -309,7 +320,7 @@
 								"api",
 								"v1",
 								"user",
-								"2"
+								"11"
 							]
 						}
 					},
@@ -559,7 +570,39 @@
 					"response": []
 				},
 				{
-					"name": "Update Pin",
+					"name": "Get Pin By User Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGV3b0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6ImRld28iLCJmaXJzdE5hbWUiOiJKb2huIiwibGFzdE5hbWUiOiJTbWl0aCIsImlhdCI6MTYwMTA0MzcxMCwiZXhwIjoxNjAxMDg2OTEwfQ.45u3oCV6SctfJzWVDUOdC9XbDRoa-Sq0Ha9fBQUfGgQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/pin/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"pin",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Pin By User Id",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -601,39 +644,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Pin By User Id",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGV3b0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6ImRld28iLCJmaXJzdE5hbWUiOiJKb2huIiwibGFzdE5hbWUiOiJTbWl0aCIsImlhdCI6MTYwMTA0MzcxMCwiZXhwIjoxNjAxMDg2OTEwfQ.45u3oCV6SctfJzWVDUOdC9XbDRoa-Sq0Ha9fBQUfGgQ",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/v1/pin/2",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"pin",
-								"2"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete Pin",
+					"name": "Delete Pin By User Id",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -660,6 +671,181 @@
 								"pin",
 								"8"
 							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Phone",
+			"item": [
+				{
+					"name": "Add Phone Number",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxNDU1MDU0LCJleHAiOjE2MDE0OTgyNTR9.hAdGDIwl6t4xdSmFcNJ3g2cimOTOkOHDIGCHB_Pq6V8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userId",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "089999999999",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/phone",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"phone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Phone Number By User Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxNDU1MDU0LCJleHAiOjE2MDE0OTgyNTR9.hAdGDIwl6t4xdSmFcNJ3g2cimOTOkOHDIGCHB_Pq6V8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/phone/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"phone",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Phone Number By Phone Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxNDU1MDU0LCJleHAiOjE2MDE0OTgyNTR9.hAdGDIwl6t4xdSmFcNJ3g2cimOTOkOHDIGCHB_Pq6V8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phoneNumber",
+									"value": "08123456789",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/phone/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"phone",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Phone Number By Phone Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxNDU1MDU0LCJleHAiOjE2MDE0OTgyNTR9.hAdGDIwl6t4xdSmFcNJ3g2cimOTOkOHDIGCHB_Pq6V8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/phone/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"phone",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Password",
+			"item": [
+				{
+					"name": "Get Password By User Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
 						}
 					},
 					"response": []

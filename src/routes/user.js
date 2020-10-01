@@ -10,6 +10,7 @@ router
   .get('/', verifyAccess, userController.getAllUser)
   .post('/register', userController.register)
   .post('/login', userController.login)
+  .patch('/password/:id', verifyAccess, userController.updatePassword)
   .patch('/:id', verifyAccess, upload, userController.updateUser)
   .delete('/:id', verifyAccess, userController.deleteUser)
 
