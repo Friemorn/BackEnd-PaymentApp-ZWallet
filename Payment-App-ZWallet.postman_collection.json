@@ -18,12 +18,12 @@
 							"urlencoded": [
 								{
 									"key": "username",
-									"value": "arthuria",
+									"value": "arthur",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "pendragon@gmail.com",
+									"value": "arthurpendragon@gmail.com",
 									"type": "text"
 								},
 								{
@@ -32,10 +32,9 @@
 									"type": "text"
 								},
 								{
-									"key": "",
-									"value": "",
-									"type": "text",
-									"disabled": true
+									"key": "image",
+									"value": "https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true",
+									"type": "text"
 								}
 							]
 						},

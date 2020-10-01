@@ -6,7 +6,7 @@ const fs = require('fs')
 
 module.exports = {
   register: async (req, res) => {
-    const { username, email, password } = req.body
+    const { username, email, password, image } = req.body
     const isUsername = await userModels.getUserByUsername(username)
     const isUser = await userModels.getUserbyEmail(email)
     if (isUsername.length !== 0) return helper.res(res, { message: 'Username is Already Exist' }, 403, null)
@@ -17,7 +17,7 @@ module.exports = {
       lastName: 'LastName',
       email,
       password,
-      image: 'https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true',
+      image,
       balance: 0,
       createdAt: new Date()
     }
