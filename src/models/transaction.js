@@ -3,7 +3,7 @@ const connection = require('../configs/db')
 const transaction = {
   getTransactionByUserId: (id) => {
     return new Promise((resolve, reject) => {
-      connection.query(`SELECT * FROM transaction WHERE senderId = ${id} UNION ALL SELECT * FROM transaction WHERE receiverId = ${id} ORDER BY createdAt DESC`, (err, result) => {
+      connection.query(`SELECT * FROM transaction WHERE userId = ?`, id, (err, result) => {
         if (!err) {
           resolve(result)
         } else {
