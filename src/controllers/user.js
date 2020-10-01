@@ -248,10 +248,9 @@ module.exports = {
     userModels.getUserById(id)
       .then((result) => {
         const user = result[0]
-        console.log(user)
         const hash = user.password
     bcrypt.compare(password, hash).then((resCompare) => {
-      if (!resCompare) return helper.res(res, { message: "Don't Use Old Password" }, 403, null)
+      if (resCompare) return helper.res(res, { message: "Don't Use Old Password" }, 403, null)
       bcrypt.genSalt(10, function (err, salt) {
         bcrypt.hash(data.password, salt, function (err, hash) {
           data.password = hash

@@ -840,12 +840,44 @@
 			"name": "Password",
 			"item": [
 				{
-					"name": "Get Password By User Id",
+					"name": "Update Password",
 					"request": {
-						"method": "GET",
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExLCJlbWFpbCI6ImtpbmdvZnVydWtAZ21haWwuY29tIiwidXNlcm5hbWUiOiJHaWxnYW1lc2giLCJmaXJzdE5hbWUiOiJHb2xkZW4iLCJsYXN0TmFtZSI6IktpbmciLCJpYXQiOjE2MDE1MTkzNjEsImV4cCI6MTYwMTU2MjU2MX0.a-BKcCEc0MfJTpMSwU7965TtaUan2ZPOujbPluQoz1E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
 						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "ea",
+									"type": "text"
+								}
+							]
+						},
 						"url": {
-							"raw": ""
+							"raw": "http://localhost:3000/api/v1/user/password/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"password",
+								"11"
+							]
 						}
 					},
 					"response": []
