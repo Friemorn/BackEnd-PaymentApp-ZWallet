@@ -18,18 +18,24 @@
 							"urlencoded": [
 								{
 									"key": "username",
-									"value": "gilgamesh",
+									"value": "arthuria",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "kingofuruk@gmail.com",
+									"value": "pendragon@gmail.com",
 									"type": "text"
 								},
 								{
 									"key": "password",
-									"value": "ea",
+									"value": "excalibur",
 									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
 								}
 							]
 						},
@@ -265,23 +271,23 @@
 							"formdata": [
 								{
 									"key": "username",
-									"value": "gil",
+									"value": "arthuria",
 									"type": "text"
 								},
 								{
 									"key": "firstName",
-									"value": "King",
+									"value": "Arthuria",
 									"type": "text"
 								},
 								{
 									"key": "lastName",
-									"value": "Gilgamesh",
+									"value": "Pendaragon",
 									"type": "text"
 								},
 								{
 									"key": "image",
 									"type": "file",
-									"src": "/C:/Users/Dewondo Friemorn/Downloads/Images/5302518.png"
+									"src": "/C:/Users/Dewondo Friemorn/Downloads/Images/5302516.png"
 								},
 								{
 									"key": "",
@@ -310,7 +316,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/v1/user/11",
+							"raw": "http://localhost:3000/api/v1/user/13",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -320,7 +326,7 @@
 								"api",
 								"v1",
 								"user",
-								"11"
+								"13"
 							]
 						}
 					},

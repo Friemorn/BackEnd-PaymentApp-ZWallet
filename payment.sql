@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 01, 2020 at 11:46 AM
+-- Generation Time: Oct 01, 2020 at 01:57 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -152,7 +152,8 @@ INSERT INTO `user` (`userId`, `username`, `firstName`, `lastName`, `email`, `pas
 (6, 'ardiyanto', 'Ardiyanto', 'Alan', 'ardiyanto@gmail.com', '$2a$10$N8X6ke.fCgmIRq6jVF86bOb254iC0FokcX0FHHrnj7jlNNqx/AJ0e', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_43_26.991Zflat,800x800,075,t.jpg', 500000, '2020-10-01 09:43:26'),
 (7, 'dewondo', 'Dewondo', 'Friemorn', 'dewondo@gmail.com', '$2a$10$WhlB6xFAsIfetPqeI4QtGOAoP6lCrbggc0tEuLS0f0BDaVuCRSP9K', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_44_12.090Ztibo.jpg', 5000000, '2020-10-01 09:44:12'),
 (8, 'friemorn', 'Friemorn', 'Dewondo', 'friemorn@gmail.com', '$2a$10$uWoZHIj89TjqY.ajvLR79uAyfzOc/xf4KmlE7rW9C4enxRM2HGtxW', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_44_52.539Ztibo.jpg', 2500000, '2020-10-01 09:44:52'),
-(11, 'gil', 'King', 'Gilgamesh', 'kingofuruk@gmail.com', '$2a$10$v1XoE7hWkN2SXl0MsSEQPeRKB.D5YQOmPmPiG9gTwGMqlBHStuYdq', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_45_32.746Z5302518.png', 99999999, '2020-10-01 09:45:32');
+(11, 'gil', 'King', 'Gilgamesh', 'kingofuruk@gmail.com', '$2a$10$v1XoE7hWkN2SXl0MsSEQPeRKB.D5YQOmPmPiG9gTwGMqlBHStuYdq', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_45_32.746Z5302518.png', 99999999, '2020-10-01 09:45:32'),
+(13, 'arthuria', 'Arthuria', 'Pendaragon', 'pendragon@gmail.com', '$2a$10$H1.YkavPXVbqF5PKUXMxveKuIfkIDWtB29PpRatMPszGHF2WMXuLG', 'http://localhost:3000/api/v1/uploads/2020-10-01T11_54_19.736Z5302516.png', 0, '2020-10-01 11:54:19');
 
 --
 -- Indexes for dumped tables
@@ -225,7 +226,7 @@ ALTER TABLE `transaction`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Constraints for dumped tables
