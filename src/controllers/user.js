@@ -17,7 +17,7 @@ module.exports = {
       lastName: 'LastName',
       email,
       password,
-      image: process.env.BASE_URL+'/uploads/https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true',
+      image: process.env.BASE_URL+'/uploads/FirstImage.png',
       balance: 0,
       createdAt: new Date()
     }
@@ -80,9 +80,14 @@ module.exports = {
     if (req.file) {
       userModels.getUserById(id).then(result => {
         const user = result[0]
-        const img = user.image.replace(`${process.env.BASE_URL}/uploads/`, '')
-        const filePath = `./uploads/${img}`;
-        fs.unlinkSync(filePath)
+        console.log(user)
+        if (user.image === `${process.env.BASE_URL}/uploads/FirstImage.png`) {
+          data.image = `${process.env.BASE_URL}/uploads/${req.file.filename}`
+        } else {
+          const img = user.image.replace(`${process.env.BASE_URL}/uploads/`, '')
+          const filePath = `./uploads/${img}`
+          fs.unlinkSync(filePath)
+        }
       })
       data.image = `${process.env.BASE_URL}/uploads/${req.file.filename}`
     }
