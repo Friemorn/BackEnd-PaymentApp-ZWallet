@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 01, 2020 at 01:57 PM
+-- Generation Time: Oct 06, 2020 at 04:37 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -153,7 +153,9 @@ INSERT INTO `user` (`userId`, `username`, `firstName`, `lastName`, `email`, `pas
 (7, 'dewondo', 'Dewondo', 'Friemorn', 'dewondo@gmail.com', '$2a$10$WhlB6xFAsIfetPqeI4QtGOAoP6lCrbggc0tEuLS0f0BDaVuCRSP9K', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_44_12.090Ztibo.jpg', 5000000, '2020-10-01 09:44:12'),
 (8, 'friemorn', 'Friemorn', 'Dewondo', 'friemorn@gmail.com', '$2a$10$uWoZHIj89TjqY.ajvLR79uAyfzOc/xf4KmlE7rW9C4enxRM2HGtxW', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_44_52.539Ztibo.jpg', 2500000, '2020-10-01 09:44:52'),
 (11, 'gil', 'King', 'Gilgamesh', 'kingofuruk@gmail.com', '$2a$10$v1XoE7hWkN2SXl0MsSEQPeRKB.D5YQOmPmPiG9gTwGMqlBHStuYdq', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_45_32.746Z5302518.png', 99999999, '2020-10-01 09:45:32'),
-(13, 'arthuria', 'Arthuria', 'Pendaragon', 'pendragon@gmail.com', '$2a$10$H1.YkavPXVbqF5PKUXMxveKuIfkIDWtB29PpRatMPszGHF2WMXuLG', 'http://localhost:3000/api/v1/uploads/2020-10-01T11_54_19.736Z5302516.png', 0, '2020-10-01 11:54:19');
+(13, 'arthuria', 'Arthuria', 'Pendaragon', 'pendragon@gmail.com', '$2a$10$H1.YkavPXVbqF5PKUXMxveKuIfkIDWtB29PpRatMPszGHF2WMXuLG', 'http://localhost:3000/api/v1/uploads/2020-10-01T11_54_19.736Z5302516.png', 0, '2020-10-01 11:54:19'),
+(15, 'arthur', 'Arthur', 'Pendaragon', 'arthurpendragon@gmail.com', '$2a$10$B0jB8yDUHqhkUvg3MdJimuD82VWV4wHYwy7qHR6SM/i9TXdagoXsu', 'http://localhost:3000/api/v1/uploads/2020-10-02T14_51_46.192Zflat,800x800,075,t.jpg', 0, '2020-10-02 14:51:46'),
+(16, 'gintoki', 'Sakata', 'Gintoki', 'yorozuya@gmail.com', '$2a$10$P1APElnmWTsOSZ1CZlNbKu8sxuIo/pY2SOQqUxUx29zznLkaadD1C', 'http://localhost:3000/api/v1/uploads/2020-10-06T14_35_12.443Z5302518.png', 0, '2020-10-06 14:35:12');
 
 --
 -- Indexes for dumped tables
@@ -226,7 +228,7 @@ ALTER TABLE `transaction`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Constraints for dumped tables
