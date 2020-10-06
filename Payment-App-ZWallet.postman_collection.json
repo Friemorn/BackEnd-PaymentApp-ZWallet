@@ -18,23 +18,24 @@
 							"urlencoded": [
 								{
 									"key": "username",
-									"value": "arthur",
+									"value": "gintoki",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "arthurpendragon@gmail.com",
+									"value": "yorozuya@gmail.com",
 									"type": "text"
 								},
 								{
 									"key": "password",
-									"value": "excalibur",
+									"value": "ginchan",
 									"type": "text"
 								},
 								{
-									"key": "image",
-									"value": "https://github.com/Friemorn/BackEnd-PaymentApp-ZWallet/blob/master/www.freepik.comfree-iconmale-user-shadow_751026.htm%23page=1&query=user&position=2.png?raw=true",
-									"type": "text"
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
 								}
 							]
 						},
@@ -65,12 +66,12 @@
 							"urlencoded": [
 								{
 									"key": "email",
-									"value": "dewo@gmail.com",
+									"value": "kingofuruk@gmail.com",
 									"type": "text"
 								},
 								{
 									"key": "password",
-									"value": "dewo",
+									"value": "ea",
 									"type": "text"
 								}
 							]
@@ -100,7 +101,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxNDU1MDU0LCJleHAiOjE2MDE0OTgyNTR9.hAdGDIwl6t4xdSmFcNJ3g2cimOTOkOHDIGCHB_Pq6V8",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExLCJlbWFpbCI6ImtpbmdvZnVydWtAZ21haWwuY29tIiwidXNlcm5hbWUiOiJnaWwiLCJmaXJzdE5hbWUiOiJLaW5nIiwibGFzdE5hbWUiOiJHaWxnYW1lc2giLCJpYXQiOjE2MDE5MTM5MDEsImV4cCI6MTYwMTk1NzEwMX0.Zv6p79vnn5pD6UCRXgP0cp8UfjCvvrHmIjVnsBgq8Sc",
 									"type": "string"
 								}
 							]
@@ -126,6 +127,9 @@
 				},
 				{
 					"name": "Get User By Username",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -139,6 +143,10 @@
 						},
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
 						"url": {
 							"raw": "http://localhost:3000/api/v1/user/username/Dewondo",
 							"protocol": "http",
@@ -258,7 +266,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExLCJlbWFpbCI6ImtpbmdvZnVydWtAZ21haWwuY29tIiwidXNlcm5hbWUiOiJHaWxnYW1lc2giLCJmaXJzdE5hbWUiOiJHb2xkZW4iLCJsYXN0TmFtZSI6IktpbmciLCJpYXQiOjE2MDE1MTkzNjEsImV4cCI6MTYwMTU2MjU2MX0.a-BKcCEc0MfJTpMSwU7965TtaUan2ZPOujbPluQoz1E",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExLCJlbWFpbCI6ImtpbmdvZnVydWtAZ21haWwuY29tIiwidXNlcm5hbWUiOiJnaWwiLCJmaXJzdE5hbWUiOiJLaW5nIiwibGFzdE5hbWUiOiJHaWxnYW1lc2giLCJpYXQiOjE2MDE5OTQ4OTcsImV4cCI6MTYwMjAzODA5N30.WJrCGqz1OdkP1cQNFDjL4m2vVkV0pK-CV82wcqXfSUI",
 									"type": "string"
 								}
 							]
@@ -270,23 +278,23 @@
 							"formdata": [
 								{
 									"key": "username",
-									"value": "arthur",
+									"value": "gintoki",
 									"type": "text"
 								},
 								{
 									"key": "firstName",
-									"value": "Arthur",
+									"value": "Sakata",
 									"type": "text"
 								},
 								{
 									"key": "lastName",
-									"value": "Pendaragon",
+									"value": "Gintoki",
 									"type": "text"
 								},
 								{
 									"key": "image",
 									"type": "file",
-									"src": "/C:/Users/Dewondo Friemorn/Downloads/Images/5302516.png"
+									"src": "/C:/Users/Dewondo Friemorn/Downloads/Images/5302518.png"
 								},
 								{
 									"key": "",
@@ -315,7 +323,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/v1/user/15",
+							"raw": "http://localhost:3000/api/v1/user/16",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -325,7 +333,7 @@
 								"api",
 								"v1",
 								"user",
-								"15"
+								"16"
 							]
 						}
 					},
@@ -456,7 +464,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExLCJlbWFpbCI6ImtpbmdvZnVydWtAZ21haWwuY29tIiwidXNlcm5hbWUiOiJHaWxnYW1lc2giLCJmaXJzdE5hbWUiOiJHb2xkZW4iLCJsYXN0TmFtZSI6IktpbmciLCJpYXQiOjE2MDE1MTkzNjEsImV4cCI6MTYwMTU2MjU2MX0.a-BKcCEc0MfJTpMSwU7965TtaUan2ZPOujbPluQoz1E",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExLCJlbWFpbCI6ImtpbmdvZnVydWtAZ21haWwuY29tIiwidXNlcm5hbWUiOiJnaWwiLCJmaXJzdE5hbWUiOiJLaW5nIiwibGFzdE5hbWUiOiJHaWxnYW1lc2giLCJpYXQiOjE2MDE5MTM5MDEsImV4cCI6MTYwMTk1NzEwMX0.Zv6p79vnn5pD6UCRXgP0cp8UfjCvvrHmIjVnsBgq8Sc",
 									"type": "string"
 								}
 							]
@@ -492,7 +500,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxMTk2NDI0LCJleHAiOjE2MDEyMzk2MjR9.Cv6sH0DLXP0iIDO_1hcxaQoEzJTux9ccgGh6d4YZo3U",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiZGY3QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV3byIsImZpcnN0TmFtZSI6IkRld29uZG8iLCJsYXN0TmFtZSI6IkZyaWVtb3JuIiwiaWF0IjoxNjAxMzkzNjA0LCJleHAiOjE2MDE0MzY4MDR9.LxwpqulpqZVUZAEAYMEFV7t2aCYIRGOtjc7kgfyq3eM",
 									"type": "string"
 								}
 							]
@@ -726,7 +734,7 @@
 								},
 								{
 									"key": "phoneNumber",
-									"value": "089999999999",
+									"value": "999999999999",
 									"type": "text"
 								}
 							]
