@@ -909,6 +909,42 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Forgot Password Send Email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "to",
+									"value": "dewondofriemorn.s4a@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "Reset Password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/email",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"email"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
