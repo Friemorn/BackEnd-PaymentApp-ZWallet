@@ -100,6 +100,23 @@ module.exports = {
         console.log(err)
       })
   },
+  updateBalance: (req, res) => {
+    const id = req.params.id
+    const {
+      balance
+    } = req.body
+    const data = {
+      balance
+    }
+    userModels.updateBalance(id, data)
+      .then((result) => {
+        console.log(result)
+        helper.res(res, result, 200, null)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
   deleteUser: (req, res) => {
     const id = req.params.id
     userModels.getUserById(id).then(result => {

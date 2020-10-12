@@ -340,6 +340,49 @@
 					"response": []
 				},
 				{
+					"name": "Update Balance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExLCJlbWFpbCI6ImtpbmdvZnVydWtAZ21haWwuY29tIiwidXNlcm5hbWUiOiJnaWwiLCJmaXJzdE5hbWUiOiJLaW5nIiwibGFzdE5hbWUiOiJHaWxnYW1lc2giLCJpYXQiOjE2MDI1MTYyMDksImV4cCI6MTYwMjU1OTQwOX0.n-WEhLKMTGoPB2rAd1uBvBlHLqKJO7WKW6HmMwMEpws",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "balance",
+									"value": "100000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/balance/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"balance",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Delete User",
 					"request": {
 						"auth": {

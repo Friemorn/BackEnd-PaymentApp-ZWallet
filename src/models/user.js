@@ -78,6 +78,17 @@ const user = {
       })
     })
   },
+  updateBalance: (id, data) => {
+    return new Promise((resolve, reject) => {
+      connection.query('UPDATE user SET ? WHERE userId = ?', [data, id], (err, result) => {
+        if (!err) {
+          resolve(result)
+        } else {
+          reject(new Error(err))
+        }
+      })
+    })
+  },
   deleteUser: (userId) => {
     return new Promise((resolve, reject) => {
       connection.query('DELETE FROM user WHERE userId = ?', userId, (err, result) => {

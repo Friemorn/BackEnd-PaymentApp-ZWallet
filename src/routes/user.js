@@ -12,6 +12,7 @@ router
   .post('/login', userController.login)
   .patch('/password/:id', verifyAccess, userController.updatePassword)
   .patch('/:id', verifyAccess, upload, userController.updateUser)
+  .patch('/balance/:id', verifyAccess, userController.updateBalance)
   .delete('/:id', verifyAccess, userController.deleteUser)
 
 module.exports = router
