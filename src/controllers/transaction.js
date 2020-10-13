@@ -29,6 +29,48 @@ const transaction = {
         console.log(err)
       })
   },
+  getTransactionThisWeek: (req, res) => {
+    const id = req.params.id
+    transactionModels.getTransactionThisWeek(id)
+      .then((result) => {
+        if (result.length > 0) {
+          helper.res(res, result, 200, null)
+        } else {
+          helper.res(res, [], 200, null)
+        }
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+  getIncomeThisWeek: (req, res) => {
+    const id = req.params.id
+    transactionModels.getIncomeThisWeek(id)
+      .then((result) => {
+        if (result.length > 0) {
+          helper.res(res, result, 200, null)
+        } else {
+          helper.res(res, [], 200, null)
+        }
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+  getExpenseThisWeek: (req, res) => {
+    const id = req.params.id
+    transactionModels.getExpenseThisWeek(id)
+      .then((result) => {
+        if (result.length > 0) {
+          helper.res(res, result, 200, null)
+        } else {
+          helper.res(res, [], 200, null)
+        }
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
   insertTransaction: (req, res) => {
     const {
       userId,

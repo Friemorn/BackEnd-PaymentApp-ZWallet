@@ -536,6 +536,126 @@
 					"response": []
 				},
 				{
+					"name": "Get Transaction This Week By User Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExLCJlbWFpbCI6ImtpbmdvZnVydWtAZ21haWwuY29tIiwidXNlcm5hbWUiOiJnaWwiLCJmaXJzdE5hbWUiOiJLaW5nIiwibGFzdE5hbWUiOiJHaWxnYW1lc2giLCJpYXQiOjE2MDI2MDMzMjUsImV4cCI6MTYwMjY0NjUyNX0.X_GFOP-VRjV2E0lh_fBJta2NnBr2hGGmTSc6OzYkXfI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/transaction/week/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"transaction",
+								"week",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Income This Week By User Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExLCJlbWFpbCI6ImtpbmdvZnVydWtAZ21haWwuY29tIiwidXNlcm5hbWUiOiJnaWwiLCJmaXJzdE5hbWUiOiJLaW5nIiwibGFzdE5hbWUiOiJHaWxnYW1lc2giLCJpYXQiOjE2MDI2MDMzMjUsImV4cCI6MTYwMjY0NjUyNX0.X_GFOP-VRjV2E0lh_fBJta2NnBr2hGGmTSc6OzYkXfI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/transaction/income/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"transaction",
+								"income",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Expense This Week By User Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExLCJlbWFpbCI6ImtpbmdvZnVydWtAZ21haWwuY29tIiwidXNlcm5hbWUiOiJnaWwiLCJmaXJzdE5hbWUiOiJLaW5nIiwibGFzdE5hbWUiOiJHaWxnYW1lc2giLCJpYXQiOjE2MDI2MDMzMjUsImV4cCI6MTYwMjY0NjUyNX0.X_GFOP-VRjV2E0lh_fBJta2NnBr2hGGmTSc6OzYkXfI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/transaction/expense/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"transaction",
+								"expense",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get All Transaction",
 					"request": {
 						"auth": {
