@@ -36,7 +36,7 @@ const transaction = {
   },
   getIncomeThisWeek: (id) => {
     return new Promise((resolve, reject) => {
-      connection.query(`SELECT SUM(amount) AS income FROM transaction WHERE receiverId = ? AND createdAt >= CURRENT_DATE - INTERVAL 7 DAY`, id, (err, result) => {
+      connection.query(`SELECT SUM(amount) AS income FROM transaction WHERE receiverId = ${id} AND userId = ${id} AND createdAt >= CURRENT_DATE - INTERVAL 7 DAY`, (err, result) => {
         if (!err) {
           resolve(result)
         } else {
@@ -47,7 +47,7 @@ const transaction = {
   },
   getExpenseThisWeek: (id) => {
     return new Promise((resolve, reject) => {
-      connection.query(`SELECT SUM(amount) AS expense FROM transaction WHERE senderId = ? AND createdAt >= CURRENT_DATE - INTERVAL 7 DAY`, id, (err, result) => {
+      connection.query(`SELECT SUM(amount) AS expense FROM transaction WHERE senderId = ${id} AND userId = ${id} AND createdAt >= CURRENT_DATE - INTERVAL 7 DAY`, (err, result) => {
         if (!err) {
           resolve(result)
         } else {
