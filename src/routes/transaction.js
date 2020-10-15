@@ -4,7 +4,8 @@ const router = express.Router()
 const { verifyAccess } = require('../middlewares/auth')
 
 router
-  .get('/:id', verifyAccess, transactionController.getTransactionByUserId)
+  .get('/in/:id', verifyAccess, transactionController.getTransactionInByUserId)
+  .get('/out/:id', verifyAccess, transactionController.getTransactionOutByUserId)
   .get('/', verifyAccess, transactionController.getAllTransaction)
   .get('/week/:id', verifyAccess, transactionController.getTransactionThisWeek)
   .get('/income/:id', verifyAccess, transactionController.getIncomeThisWeek)

@@ -2,9 +2,23 @@ const transactionModels = require('../models/transaction')
 const helper = require('../helpers/helpers')
 
 const transaction = {
-  getTransactionByUserId: (req, res) => {
+  getTransactionInByUserId: (req, res) => {
     const id = req.params.id
-    transactionModels.getTransactionByUserId(id)
+    transactionModels.getTransactionInByUserId(id)
+      .then((result) => {
+        if (result.length > 0) {
+          helper.res(res, result, 200, null)
+        } else {
+          helper.res(res, [], 200, null)
+        }
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+  getTransactionOutByUserId: (req, res) => {
+    const id = req.params.id
+    transactionModels.getTransactionOutByUserId(id)
       .then((result) => {
         if (result.length > 0) {
           helper.res(res, result, 200, null)

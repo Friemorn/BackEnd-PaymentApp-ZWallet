@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 06, 2020 at 04:37 PM
+-- Generation Time: Oct 15, 2020 at 09:19 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -116,11 +116,16 @@ CREATE TABLE `transaction` (
 --
 
 INSERT INTO `transaction` (`transactionId`, `userId`, `senderId`, `senderName`, `receiverId`, `receiverName`, `amount`, `createdAt`, `statusId`, `notes`) VALUES
-(1, 1, 1, 'soloplayer', 3, 'alan', 50000, '2020-10-01 08:42:28', 2, 'Bayar Utang'),
-(2, 3, 1, 'soloplayer', 3, 'alan', 50000, '2020-10-01 08:42:28', 2, 'Bayar Utang'),
-(3, 4, 4, 'erlangga', 1, 'soloplayer', 100000, '2020-10-01 08:45:07', 2, 'Bayar Pulsa'),
-(4, 1, 4, 'erlangga', 1, 'soloplayer', 100000, '2020-10-01 08:45:07', 2, 'Bayar Pulsa'),
-(8, 7, 7, 'dewondo', 11, 'Gilgamesh', 50000, '2020-10-01 09:09:36', 1, 'Buat Makan');
+(1, 1, 1, 'soloplayer', 3, 'alan', 50000, '2020-10-10 08:42:28', 2, 'Bayar Utang'),
+(2, 3, 1, 'soloplayer', 3, 'alan', 50000, '2020-10-10 08:42:28', 2, 'Bayar Utang'),
+(3, 4, 4, 'erlangga', 1, 'soloplayer', 100000, '2020-10-10 08:45:07', 2, 'Bayar Pulsa'),
+(4, 1, 4, 'erlangga', 1, 'soloplayer', 100000, '2020-10-10 08:45:07', 2, 'Bayar Pulsa'),
+(5, 1, 1, 'soloplayer', 11, 'gil', 100000, '2020-10-11 15:07:35', 2, 'hutang'),
+(6, 11, 1, 'soloplayer', 11, 'gil', 100000, '2020-10-11 15:12:06', 2, 'hutang'),
+(7, 8, 8, 'friemorn', 1, 'soloplayer', 50000, '2020-10-12 15:10:26', 2, 'Beli Gundam'),
+(8, 1, 8, 'friemorn', 1, 'soloplayer', 50000, '2020-10-12 15:12:12', 2, 'Beli Gundam'),
+(9, 11, 11, 'gil', 1, 'soloplayer', 9999999, '2020-10-13 15:13:53', 2, 'Beli Saint Quartz'),
+(10, 1, 11, 'gil', 1, 'soloplayer', 9999999, '2020-10-15 07:12:41', 2, 'Beli Saint Quartz');
 
 -- --------------------------------------------------------
 
@@ -145,14 +150,14 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`userId`, `username`, `firstName`, `lastName`, `email`, `password`, `image`, `balance`, `createdAt`) VALUES
-(1, 'soloplayer', 'Solo', 'Player', 'soloplayer@gmail.com', '$2a$10$5ykbYimPSraVwAPZDjiMv.k2o1vjnofw2BHjypbuWOzFUaAai4YSm', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_39_10.870Zflat,800x800,075,t.jpg', 200000, '2020-10-01 09:39:10'),
+(1, 'soloplayer', 'Solo', 'Player', 'soloplayer@gmail.com', '$2a$10$vTghmY8vL1DGpRsn8DEbseA4ehli.j.1L/hLlNOg8CkvQLDWmEwzO', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_39_10.870Zflat,800x800,075,t.jpg', 200000, '2020-10-15 07:09:27'),
 (3, 'alan', 'Alan', 'Ardiyanto', 'alan@gmail.com', '$2a$10$ivM46XQtjQerEzE.m5u9p.lMJOoHLiIU04UoMKfVIiBuN7a4S/tWS', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_40_41.720Zvist.jpg', 500000, '2020-10-01 09:40:41'),
 (4, 'erlangga', 'Erlangga', 'Jatikusuma', 'erlangga@gmail.com', '$2a$10$So6ij.pe/PtAsNt7OJFjd.4OhrD91I9mDoYw5FflTJ.Ke1plRiwR2', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_41_46.564ZTekkadan-Logo-4.png', 200000, '2020-10-01 09:41:46'),
 (5, 'kusuma', 'Kusuma', 'Erlangga', 'kusuma@gmail.com', '$2a$10$zwRx1N/pBaKba2K7Anr/L.EQmuYtzeao913gGw1IORexdCPT8jeO6', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_42_48.008Zflat,800x800,075,t.jpg', 700000, '2020-10-01 09:42:48'),
 (6, 'ardiyanto', 'Ardiyanto', 'Alan', 'ardiyanto@gmail.com', '$2a$10$N8X6ke.fCgmIRq6jVF86bOb254iC0FokcX0FHHrnj7jlNNqx/AJ0e', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_43_26.991Zflat,800x800,075,t.jpg', 500000, '2020-10-01 09:43:26'),
 (7, 'dewondo', 'Dewondo', 'Friemorn', 'dewondo@gmail.com', '$2a$10$WhlB6xFAsIfetPqeI4QtGOAoP6lCrbggc0tEuLS0f0BDaVuCRSP9K', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_44_12.090Ztibo.jpg', 5000000, '2020-10-01 09:44:12'),
 (8, 'friemorn', 'Friemorn', 'Dewondo', 'friemorn@gmail.com', '$2a$10$uWoZHIj89TjqY.ajvLR79uAyfzOc/xf4KmlE7rW9C4enxRM2HGtxW', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_44_52.539Ztibo.jpg', 2500000, '2020-10-01 09:44:52'),
-(11, 'gil', 'King', 'Gilgamesh', 'kingofuruk@gmail.com', '$2a$10$v1XoE7hWkN2SXl0MsSEQPeRKB.D5YQOmPmPiG9gTwGMqlBHStuYdq', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_45_32.746Z5302518.png', 99999999, '2020-10-01 09:45:32'),
+(11, 'gil', 'King', 'Gilgamesh', 'kingofuruk@gmail.com', '$2a$10$v1XoE7hWkN2SXl0MsSEQPeRKB.D5YQOmPmPiG9gTwGMqlBHStuYdq', 'http://localhost:3000/api/v1/uploads/2020-10-01T09_45_32.746Z5302518.png', 100000000, '2020-10-12 15:24:55'),
 (13, 'arthuria', 'Arthuria', 'Pendaragon', 'pendragon@gmail.com', '$2a$10$H1.YkavPXVbqF5PKUXMxveKuIfkIDWtB29PpRatMPszGHF2WMXuLG', 'http://localhost:3000/api/v1/uploads/2020-10-01T11_54_19.736Z5302516.png', 0, '2020-10-01 11:54:19'),
 (15, 'arthur', 'Arthur', 'Pendaragon', 'arthurpendragon@gmail.com', '$2a$10$B0jB8yDUHqhkUvg3MdJimuD82VWV4wHYwy7qHR6SM/i9TXdagoXsu', 'http://localhost:3000/api/v1/uploads/2020-10-02T14_51_46.192Zflat,800x800,075,t.jpg', 0, '2020-10-02 14:51:46'),
 (16, 'gintoki', 'Sakata', 'Gintoki', 'yorozuya@gmail.com', '$2a$10$P1APElnmWTsOSZ1CZlNbKu8sxuIo/pY2SOQqUxUx29zznLkaadD1C', 'http://localhost:3000/api/v1/uploads/2020-10-06T14_35_12.443Z5302518.png', 0, '2020-10-06 14:35:12');
@@ -222,7 +227,7 @@ ALTER TABLE `status`
 -- AUTO_INCREMENT for table `transaction`
 --
 ALTER TABLE `transaction`
-  MODIFY `transactionId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `transactionId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `user`

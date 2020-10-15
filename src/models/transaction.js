@@ -1,9 +1,20 @@
 const connection = require('../configs/db')
 
 const transaction = {
-  getTransactionByUserId: (id) => {
+  getTransactionInByUserId: (id) => {
     return new Promise((resolve, reject) => {
-      connection.query(`SELECT * FROM transaction WHERE userId = ?`, id, (err, result) => {
+      connection.query(`SELECT * FROM transaction WHERE userId = ${id} AND receiverId = ${id}`, (err, result) => {
+        if (!err) {
+          resolve(result)
+        } else {
+          reject(new Error(err))
+        }
+      })
+    })
+  },
+  getTransactionOutByUserId: (id) => {
+    return new Promise((resolve, reject) => {
+      connection.query(`SELECT * FROM transaction WHERE userId = ${id} AND senderId = ${id}`, (err, result) => {
         if (!err) {
           resolve(result)
         } else {

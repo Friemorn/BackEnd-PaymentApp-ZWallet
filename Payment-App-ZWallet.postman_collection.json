@@ -497,7 +497,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Transaction By User Id",
+					"name": "Get Transaction In By User Id",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -507,7 +507,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExLCJlbWFpbCI6ImtpbmdvZnVydWtAZ21haWwuY29tIiwidXNlcm5hbWUiOiJnaWwiLCJmaXJzdE5hbWUiOiJLaW5nIiwibGFzdE5hbWUiOiJHaWxnYW1lc2giLCJpYXQiOjE2MDE5MTM5MDEsImV4cCI6MTYwMTk1NzEwMX0.Zv6p79vnn5pD6UCRXgP0cp8UfjCvvrHmIjVnsBgq8Sc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExLCJlbWFpbCI6ImtpbmdvZnVydWtAZ21haWwuY29tIiwidXNlcm5hbWUiOiJnaWwiLCJmaXJzdE5hbWUiOiJLaW5nIiwibGFzdE5hbWUiOiJHaWxnYW1lc2giLCJpYXQiOjE2MDI3NDUzMzIsImV4cCI6MTYwMjc4ODUzMn0.1pxKQnFwquuVg5x1vzcVe6cZLOQ8nkmy1Mcb77ExYGg",
 									"type": "string"
 								}
 							]
@@ -519,7 +519,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/v1/transaction/1",
+							"raw": "http://localhost:3000/api/v1/transaction/in/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -529,6 +529,47 @@
 								"api",
 								"v1",
 								"transaction",
+								"in",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Transaction Out By User Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExLCJlbWFpbCI6ImtpbmdvZnVydWtAZ21haWwuY29tIiwidXNlcm5hbWUiOiJnaWwiLCJmaXJzdE5hbWUiOiJLaW5nIiwibGFzdE5hbWUiOiJHaWxnYW1lc2giLCJpYXQiOjE2MDI3NDUzMzIsImV4cCI6MTYwMjc4ODUzMn0.1pxKQnFwquuVg5x1vzcVe6cZLOQ8nkmy1Mcb77ExYGg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/transaction/out/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"transaction",
+								"out",
 								"1"
 							]
 						}
