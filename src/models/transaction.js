@@ -3,7 +3,7 @@ const connection = require('../configs/db')
 const transaction = {
   getTransactionInByUserId: (id) => {
     return new Promise((resolve, reject) => {
-      connection.query(`SELECT * FROM transaction WHERE userId = ${id} AND receiverId = ${id}`, (err, result) => {
+      connection.query(`SELECT transaction.*, user.image FROM transaction LEFT JOIN user ON transaction.senderId = user.userId WHERE transaction.userId = ${id} AND transaction.receiverId = ${id}`, (err, result) => {
         if (!err) {
           resolve(result)
         } else {
@@ -14,7 +14,7 @@ const transaction = {
   },
   getTransactionOutByUserId: (id) => {
     return new Promise((resolve, reject) => {
-      connection.query(`SELECT * FROM transaction WHERE userId = ${id} AND senderId = ${id}`, (err, result) => {
+      connection.query(`SELECT transaction.*, user.image FROM transaction LEFT JOIN user ON transaction.receiverId = user.userId WHERE transaction.userId = ${id} AND transaction.senderId = ${id}`, (err, result) => {
         if (!err) {
           resolve(result)
         } else {
