@@ -60,6 +60,10 @@ npm run lint
 standard --fix 
 ```
 
+### Related Project (FrontEnd)
+
+[FrontEnd-ZWallet](https://github.com/alanard/frontend-zwallet/blob/master/README.md)
+
 ### Test Deployment Website
 Back-End
 
@@ -67,7 +71,7 @@ Back-End
 
 Front-End
 
-[zwallet-focusb.fwdev.online](http://zwallet-focusf.fwdev.online/)
+[zwallet-focusf.fwdev.online](http://zwallet-focusf.fwdev.online/)
 
 ## Team
 
