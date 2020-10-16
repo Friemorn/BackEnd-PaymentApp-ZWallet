@@ -72,7 +72,7 @@ Front-End
 ## Team
 
 <center>
-  <div style="width: 100%">
+  <div style="width: 800px">
     <table style="width: 100%">
       <tr>
         <td align="center">
