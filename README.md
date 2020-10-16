@@ -72,7 +72,7 @@ Front-End
 ## Team
 
 <center>
-  <table cellpadding="5">
+  <table cellpadding="15">
     <tr>
       <td align="center">
       <h3>Back-End Developer</h3>
