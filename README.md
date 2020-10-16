@@ -29,8 +29,7 @@
 
 Create .env file in your root project folder.
 
-```env
-
+```
 DB_HOST = localhost
 DB_USER = "your database username"
 DB_PASSWORD = "your database password"
@@ -40,11 +39,10 @@ SECRET_KEY = "your secret key"
 BASE_URL = "your url"
 EMAIL = "your email"
 EMAIL_PASSWORD = "your password email"
-
 ```
 
 ## Installation
-
+```
 Clone this repository and then use the package manager npm to install dependencies.
 ```
 
