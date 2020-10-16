@@ -72,32 +72,35 @@ Front-End
 ## Team
 
 <center>
-  <table style="width: 100%; margin 0 auto;">
-    <tr>
-      <td align="center">
-      <h3>Back-End Developer</h3>
-        <a href="https://github.com/Friemorn">
-          <img width="100" src="https://avatars1.githubusercontent.com/u/65410346?s=460&u=ab96d95c5664d273344a00a474463c811e77d0c9&v=4" alt="DF"><br/>
-          <b>Dewondo Friemorn</b>
-        </a>
-      </td>
-      <td align="center">
-      <h3>Front-End Developer</h3>
-        <a href="https://github.com/erlanggajatikusuma">
-          <img width="100" src="https://avatars0.githubusercontent.com/u/63326823?s=460&v=4" alt="EJ"><br/>
-          <b>Erlangga Jatikusuma</b>
-        </a>
-      </td>
-      <td align="center">
-      <h3>Front-End Developer</h3>
-        <a href="https://github.com/alanard">
-          <img width="100" src="https://avatars2.githubusercontent.com/u/67103326?s=460&u=22d27ed3b3a748f40ace032f62ccc8d1cf54b745&v=4" alt="AA"><br/>
-          <b>Alan Ardiyanto</b>
-        </a>
-      </td>
-    </tr>
-  </table>
+  <div style="width: 100%">
+    <table style="width: 100%">
+      <tr>
+        <td align="center">
+        <h3>Back-End Developer</h3>
+          <a href="https://github.com/Friemorn">
+            <img width="100" src="https://avatars1.githubusercontent.com/u/65410346?s=460&u=ab96d95c5664d273344a00a474463c811e77d0c9&v=4" alt="DF"><br/>
+            <b>Dewondo Friemorn</b>
+          </a>
+        </td>
+        <td align="center">
+        <h3>Front-End Developer</h3>
+          <a href="https://github.com/erlanggajatikusuma">
+            <img width="100" src="https://avatars0.githubusercontent.com/u/63326823?s=460&v=4" alt="EJ"><br/>
+            <b>Erlangga Jatikusuma</b>
+          </a>
+        </td>
+        <td align="center">
+        <h3>Front-End Developer</h3>
+          <a href="https://github.com/alanard">
+            <img width="100" src="https://avatars2.githubusercontent.com/u/67103326?s=460&u=22d27ed3b3a748f40ace032f62ccc8d1cf54b745&v=4" alt="AA"><br/>
+            <b>Alan Ardiyanto</b>
+          </a>
+        </td>
+      </tr>
+    </table>
+  </div>
 </center>
+
 
 If you want to contact me you can reach me at <dewondofriemorn.s4a@gmail.com>.
 
