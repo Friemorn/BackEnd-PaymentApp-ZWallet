@@ -46,20 +46,6 @@ EMAIL_PASSWORD = "your password email"
 ## Installation
 
 Clone this repository and then use the package manager npm to install dependencies.
-
-## Setup .env example
-
-Create .env file in your root project folder.
-
-```env
-
-DB_HOST = localhost
-DB_USER = "your database username"
-DB_PASSWORD = "your database password"
-DB_DATABASE = ufotable_cafe
-PORT = "your port"
-SECRET_KEY = "your secret key"
-
 ```
 
 ### Compiles and hot-reloads for development
@@ -79,4 +65,33 @@ standard --fix
 
 ### Test Deployment Website
 [zwallet-focusb.fwdev.online](http://zwallet-focusb.fwdev.online/)
+
+## Team
+
+<center>
+  <table>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/Friemorn">
+          <img width="100" src="https://avatars1.githubusercontent.com/u/65410346?s=460&u=ab96d95c5664d273344a00a474463c811e77d0c9&v=4" alt="DF"><br/>
+          <sub><b>Dewondo Friemorn</b></sub>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/erlanggajatikusuma">
+          <img width="100" src="https://avatars0.githubusercontent.com/u/63326823?s=460&v=4" alt="EJ"><br/>
+          <sub><b>Erlangga Jatikusuma</b></sub>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/alanard">
+          <img width="100" src="https://avatars2.githubusercontent.com/u/67103326?s=460&u=22d27ed3b3a748f40ace032f62ccc8d1cf54b745&v=4" alt="AA"><br/>
+          <sub><b>Alan Ardiyanto</b></sub>
+        </a>
+      </td>
+    </tr>
+  </table>
+</center>
+
+If you want to contact me you can reach me at <dewondofriemorn.s4a@gmail.com>.
 
